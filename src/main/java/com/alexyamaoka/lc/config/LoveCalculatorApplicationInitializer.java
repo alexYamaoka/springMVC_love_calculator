@@ -2,6 +2,7 @@ package com.alexyamaoka.lc.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.WebApplicationContext;
@@ -19,7 +20,14 @@ public class LoveCalculatorApplicationInitializer implements WebApplicationIniti
 		// create a dispatcher servlet object 
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
 		
-		servletContext.addServlet("myDispatcherServlet", dispatcherServlet)
+		
+		// registered dispatcher servlet with servlet context
+		ServletRegistration.Dynamic myCustomDispatcherServletDynamic = servletContext.addServlet("myDispatcherServlet", dispatcherServlet);
+		
+		
+		myCustomDispatcherServletDynamic.setLoadOnStartup(1); // boolean true
+		myCustomDispatcherServletDynamic.addMapping("/mywebsite.com/*);
+		
 	}
 
 }
