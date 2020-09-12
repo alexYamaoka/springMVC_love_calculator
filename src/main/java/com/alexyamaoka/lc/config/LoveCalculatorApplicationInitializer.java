@@ -6,6 +6,7 @@ import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -14,8 +15,12 @@ public class LoveCalculatorApplicationInitializer implements WebApplicationIniti
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		
-		XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
-		webApplicationContext.setConfigLocation("classpath:application-config.xml");
+		//XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
+		//webApplicationContext.setConfigLocation("classpath:application-config.xml");
+		
+		// register configuration class 
+		AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
+		webApplicationContext.register(LoveCalculatorAppConfig.class);
 		
 		// create a dispatcher servlet object 
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
