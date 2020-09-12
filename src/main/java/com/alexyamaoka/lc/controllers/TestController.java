@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
 
-	@ResponseBody
+	//@ResponseBody   - remove to connect to view resolver
 	@RequestMapping("/test")
 	public String sayHello() {
 		return "hello-world";
