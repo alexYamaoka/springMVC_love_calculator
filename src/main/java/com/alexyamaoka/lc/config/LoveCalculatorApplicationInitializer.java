@@ -26,7 +26,7 @@ public class LoveCalculatorApplicationInitializer implements WebApplicationIniti
 		
 		
 		myCustomDispatcherServletDynamic.setLoadOnStartup(1); // boolean true
-		myCustomDispatcherServletDynamic.addMapping("/mywebsite.com/*);
+		myCustomDispatcherServletDynamic.addMapping("/mywebsite.com/*");
 		
 	}
 
