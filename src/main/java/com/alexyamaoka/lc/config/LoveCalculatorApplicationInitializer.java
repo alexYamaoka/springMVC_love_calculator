@@ -10,29 +10,33 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-public class LoveCalculatorApplicationInitializer implements WebApplicationInitializer {
+//public class LoveCalculatorApplicationInitializer implements WebApplicationInitializer {
+//
+//	Programmer has full control configuring dispatcher servlet 
+// 
+//	@Override
+//	public void onStartup(ServletContext servletContext) throws ServletException {
+//		
+//		//XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
+//		//webApplicationContext.setConfigLocation("classpath:application-config.xml");
+//		
+//		// register configuration class 
+//		AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
+//		webApplicationContext.register(LoveCalculatorAppConfig.class);
+//		
+//		// create a dispatcher servlet object 
+//		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
+//		
+//		
+//		// registered dispatcher servlet with servlet context
+//		ServletRegistration.Dynamic myCustomDispatcherServletDynamic = servletContext.addServlet("myDispatcherServlet", dispatcherServlet);
+//		
+//		
+//		myCustomDispatcherServletDynamic.setLoadOnStartup(1); // boolean true
+//		myCustomDispatcherServletDynamic.addMapping("/mywebsite.com/*");
+//		
+//	}
+//
+//}
 
-	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		
-		//XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
-		//webApplicationContext.setConfigLocation("classpath:application-config.xml");
-		
-		// register configuration class 
-		AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
-		webApplicationContext.register(LoveCalculatorAppConfig.class);
-		
-		// create a dispatcher servlet object 
-		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
-		
-		
-		// registered dispatcher servlet with servlet context
-		ServletRegistration.Dynamic myCustomDispatcherServletDynamic = servletContext.addServlet("myDispatcherServlet", dispatcherServlet);
-		
-		
-		myCustomDispatcherServletDynamic.setLoadOnStartup(1); // boolean true
-		myCustomDispatcherServletDynamic.addMapping("/mywebsite.com/*");
-		
-	}
 
-}

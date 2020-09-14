@@ -4,6 +4,10 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class LCAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+	
+	// default name for spring dispatcher servlet:  "dispatcher"
+	
+	
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
