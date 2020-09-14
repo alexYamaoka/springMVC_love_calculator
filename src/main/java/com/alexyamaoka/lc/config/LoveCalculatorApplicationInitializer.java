@@ -17,6 +17,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 //	@Override
 //	public void onStartup(ServletContext servletContext) throws ServletException {
 //		
+//		//remove if not using xml file
 //		//XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
 //		//webApplicationContext.setConfigLocation("classpath:application-config.xml");
 //		
