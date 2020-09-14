@@ -12,14 +12,20 @@ public class LCAppInitializer extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		// register spring config class
+		Class[] classArray = {LoveCalculatorAppConfig.class};
+
+		return classArray;
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		// configuring mapping for dispatcher servlet
+		String[] mapping = {"/mywebsite.com/*"};
+		
+		return mapping;
 	}
 
 }
