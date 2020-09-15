@@ -12,7 +12,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 //public class LoveCalculatorApplicationInitializer implements WebApplicationInitializer {
 //
-//	Programmer has full control configuring dispatcher servlet 
+//	//Programmer has full control configuring dispatcher servlet 
 // 
 //	@Override
 //	public void onStartup(ServletContext servletContext) throws ServletException {

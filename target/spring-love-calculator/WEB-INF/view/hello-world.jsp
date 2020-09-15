@@ -8,6 +8,6 @@
 </head>
 <body>
 	<p align="center">Welcome to hello world</p>
-	<p align="center">visit <a href="www.alexyamaoka.com">alexyamaoka.com for more info</a></p>
+	<p align="center">visit <a href="https://www.alexyamaoka.com">alexyamaoka.com for more info</a></p>
 </body>
 </html>
