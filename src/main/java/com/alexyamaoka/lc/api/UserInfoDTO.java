@@ -9,27 +9,25 @@ public class UserInfoDTO {
 	private String crushName;
 	
 	
-	
+	public UserInfoDTO() {
+		System.out.println("User Info DTO constructor called");
+	}
 	
 	public String getUsername() {
 		return username;
 	}
 	
-	
 	public String getCrushName() {
 		return crushName;
 	}
-	
 	
 	public void setUsername(String username) {
 		this.username = username;
 	}
 	
-	
 	public void setCrushName(String crushName) {
 		this.crushName = crushName;
 	}
-	
 	
 	@Override
 	public String toString() {
