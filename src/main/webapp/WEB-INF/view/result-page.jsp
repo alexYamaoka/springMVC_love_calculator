@@ -11,10 +11,10 @@
 	
 	<div align="center">
 		<p>
-			Your Name: ${username}
+			Your Name: ${userInfoDTO.username}
 		</p>
 		<p>
-			Crush Name: ${crushName}
+			Crush Name: ${userInfoDTO.crushName}
 		</p>
 	</div>
 	

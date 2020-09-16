@@ -36,6 +36,8 @@ public class LCAppController {
 		System.out.println("Username: " + userInfoDTO.getUsername());
 		System.out.println("Crush Name: " + userInfoDTO.getCrushName());
 		
+		model.addAttribute("userInfoDTO", userInfoDTO);
+		
 		return "result-page";
 	}
 }
