@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1 align="center">Love Calculator</h1>
-	
+	<hr/>
 	
 	<form action="process-homepage" method="get">
 		<div align="center">
