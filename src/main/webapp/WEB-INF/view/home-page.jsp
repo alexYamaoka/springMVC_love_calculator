@@ -15,11 +15,11 @@
 		<div align="center">
 			<p>
 				<label for="yourName">Your Name: </label>
-				<form:input type="text" id="yourName" path="username"/>	
+				<form:input id="yourName" path="username"/>	
 			</p>
 			<p>
 				<label for="crushName">Crush Name: </label>
-				<form:input type="text" id="crushName" path="crushName"/>	
+				<form:input id="crushName" path="crushName"/>	
 			</p>
 			<input type="submit" value="calculate"/>
 		</div>
