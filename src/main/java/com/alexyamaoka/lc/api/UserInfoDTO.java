@@ -10,6 +10,8 @@ public class UserInfoDTO {
 	
 	
 	public UserInfoDTO() {
+		this.username = "user name demo";
+		this.crushName = "crush name demo";
 		System.out.println("User Info DTO constructor called");
 	}
 	

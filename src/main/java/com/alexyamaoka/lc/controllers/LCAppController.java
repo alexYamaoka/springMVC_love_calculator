@@ -11,7 +11,10 @@ import com.alexyamaoka.lc.api.UserInfoDTO;
 public class LCAppController {
 	
 	@RequestMapping("/")
-	public String showHomePage() {
+	public String showHomePage(Model model) {
+		// read the existing property by fetching it from the dto 
+		UserInfoDTO userInfoDTO = new UserInfoDTO();
+		model.addAttribute("userInfoDTO", userInfoDTO);	
 		
 		return "home-page";
 	}
@@ -33,6 +36,7 @@ public class LCAppController {
 	@RequestMapping("/process-homepage")
 	public String showResultPage(Model model, UserInfoDTO userInfoDTO) {
 		// Spring binds the data automatically from the url 
+		// writing the value to the properties by fetching from the url
 		System.out.println("Username: " + userInfoDTO.getUsername());
 		System.out.println("Crush Name: " + userInfoDTO.getCrushName());
 		
