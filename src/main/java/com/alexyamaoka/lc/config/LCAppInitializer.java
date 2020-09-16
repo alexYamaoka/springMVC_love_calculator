@@ -27,7 +27,7 @@ public class LCAppInitializer extends AbstractAnnotationConfigDispatcherServletI
 	protected String[] getServletMappings() {
 		
 		// configuring mapping for dispatcher servlet
-		String[] mapping = {"/mywebsite.com/*"};
+		String[] mapping = {"/"};
 		
 		return mapping;
 	}

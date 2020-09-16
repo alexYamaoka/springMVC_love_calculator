@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home Page</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<h1 align="center">Love Calculator</h1>
