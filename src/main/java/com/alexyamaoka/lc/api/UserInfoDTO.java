@@ -2,6 +2,9 @@ package com.alexyamaoka.lc.api;
 
 public class UserInfoDTO {
 	
+	// data transfer object 
+	
+	
 	private String username;
 	private String crushName;
 	
