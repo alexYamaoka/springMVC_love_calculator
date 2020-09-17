@@ -6,7 +6,7 @@ public class UserInfoDTO {
 	
 	// data transfer object 
 	
-	@NotBlank(message = "* username cannot be blank")	
+	@NotBlank(message = " * username cannot be blank")	
 	private String username;
 	private String crushName;
 	

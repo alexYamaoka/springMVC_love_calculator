@@ -1,7 +1,10 @@
 package com.alexyamaoka.lc.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,9 +22,13 @@ public class LCAppController {
 	}
 	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO) {
+	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult) {
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
+		
+		if (bindingResult.hasErrors()) {
+			System.out.println("my form has errors");
+		}
 		
 		return "result-page";
 	}	
