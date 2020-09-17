@@ -6,9 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Home Page</title>
-<!--  
-	<script type="text/javascript">
 
+	<style type="text/css">
+		.error{
+			color: red;
+			position: fixed;
+			text-align: left;
+			margin-left: 30px;
+		}
+	</style>
+	
+	<script type="text/javascript">
 		function validateUsername() {
 			var userName = document.getElementById('yourName').value;
 
@@ -19,10 +27,8 @@
 			
 			return true;
 		}
-		
 	</script>
--->
-
+	
 </head>
 <body>
 	<h1 align="center">Love Calculator</h1>
@@ -33,7 +39,7 @@
 			<p>
 				<label for="yourName">Your Name: </label>
 				<form:input id="yourName" path="username"/>	
-				<form:errors path="username"/>
+				<form:errors path="username" cssClass="error"/>
 			</p>
 			<p>
 				<label for="crushName">Crush Name: </label>
