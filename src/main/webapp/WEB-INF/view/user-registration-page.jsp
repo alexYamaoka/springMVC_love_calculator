@@ -19,7 +19,11 @@
 		<label for="password">Password: </label>
 		<form:password id="passwprd" path="password"/>
 		<br/>
-		
+		<label>Country Name: </label>
+		<form:select path="country">
+			<form:option value="U.S" label="U.S"></form:option>
+			<form:option value="Japan" label="Japan"></form:option>
+		</form:select>
 		
 	</form:form>
 	 

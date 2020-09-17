@@ -4,7 +4,9 @@ public class UserRegistrationDTO {
 	
 	private String name;
 	private String username;
-	private char[] password;		
+	private char[] password;
+	private String  country;
+	
 	// look up why char array is best for password.  
 	// Since Strings are immutable if you store the password as a String it will be available in memory 
 	// 		until the garbage collector clears it and since String are used in String pool for re-usability there is a 
@@ -29,6 +31,10 @@ public class UserRegistrationDTO {
 		return password;
 	}
 	
+	public String getCountry() {
+		return country;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -39,6 +45,10 @@ public class UserRegistrationDTO {
 	
 	public void setPassword(char[] password) {
 		this.password = password;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 	
 	
