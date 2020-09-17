@@ -12,8 +12,9 @@ public class RegistrationController {
 	
 	@RequestMapping("/register")
 	public String showRegistrationPage(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
-		userRegistrationDTO.setName("name demo");
-		userRegistrationDTO.setUsername("username demo");
+		// example to show data binding
+		//userRegistrationDTO.setName("name demo");
+		//userRegistrationDTO.setUsername("username demo");
 		return "user-registration-page";
 	}
 	
