@@ -1,0 +1,962 @@
+!SESSION 2020-09-16 14:06:15.285 -----------------------------------------------
+eclipse.buildId=4.7.2.202009020958-RELEASE
+java.version=1.8.0_261
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/ryotayamaoka/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/ryotayamaoka/.eclipse_keyring
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2020-09-16 14:06:16.328
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [360]
+  Unresolved requirement: Require-Bundle: org.mandas.docker-client; bundle-version="3.2.1"
+    -> Bundle-SymbolicName: org.mandas.docker-client; bundle-version="3.2.1.v20200519-1937"
+       org.mandas.docker-client [625]
+         Unresolved requirement: Import-Package: org.glassfish.jersey.jackson; version="2.30.1"
+           -> Export-Package: org.glassfish.jersey.jackson; bundle-symbolic-name="org.glassfish.jersey.media.jersey-media-json-jackson"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs.core"
+              org.glassfish.jersey.media.jersey-media-json-jackson [603]
+                Unresolved requirement: Import-Package: com.fasterxml.jackson.module.jaxb; version="[2.10.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.message.filtering; version="[2.30.0,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.message.filtering; bundle-symbolic-name="org.glassfish.jersey.ext.entityfiltering"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.annotation.security,javax.inject,javax.ws.rs.core,org.glassfish.jersey.message.filtering.spi"
+                     org.glassfish.jersey.ext.entityfiltering [601]
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                            org.glassfish.jersey.core.jersey-server [600]
+                              Unresolved requirement: Import-Package: javax.validation; version="[2.0.0,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.model; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.model; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal.inject,org.glassfish.jersey.message,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.model.internal.spi,org.glassfish.jersey.process,org.glassfish.jersey.server,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model.internal,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.spi,org.glassfish.jersey.uri"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.filter; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.filter; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.ws.rs.container,javax.ws.rs.core,org.glassfish.jersey.server,org.glassfish.jersey.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.message.filtering.spi; version="[2.30.0,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.message.filtering.spi; bundle-symbolic-name="org.glassfish.jersey.ext.entityfiltering"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="org.glassfish.jersey.spi"
+  Unresolved requirement: Require-Bundle: org.glassfish.jersey.containers.servlet; bundle-version="2.3.0.1"
+    -> Bundle-SymbolicName: org.glassfish.jersey.containers.servlet; bundle-version="2.30.1.v20200513-1859"
+       org.glassfish.jersey.containers.servlet [596]
+         Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal; version="[2.30.1,2.31.0)"
+           -> Export-Package: org.glassfish.jersey.servlet.internal; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.server,org.glassfish.jersey.server.spi,org.glassfish.jersey.servlet.internal.spi,org.glassfish.jersey.servlet.spi"
+              org.glassfish.jersey.containers.servlet.core [597]
+                Unresolved requirement: Import-Package: javax.persistence; resolution:="optional"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal.scanning; version="[2.30.1,2.31.0)"
+                  -> Export-Package: org.glassfish.jersey.server.internal.scanning; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="org.glassfish.jersey.server,org.glassfish.jersey.server.internal"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.server.spi; version="[2.30.1,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.server.spi; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.validation,javax.ws.rs,javax.ws.rs.core,org.glassfish.jersey.internal.inject,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal; version="[2.30.1,2.31.0)"
+                  -> Export-Package: org.glassfish.jersey.server.internal; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.annotation,javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.internal.util,org.glassfish.jersey.message.internal,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.spi; version="[2.30.1,3.0.0)"
+           -> Export-Package: org.glassfish.jersey.servlet.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.servlet; version="[2.30.1,3.0.0)"
+           -> Export-Package: org.glassfish.jersey.servlet; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal.spi; version="[2.30.1,2.31.0)"
+           -> Export-Package: org.glassfish.jersey.servlet.internal.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+           -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+  Unresolved requirement: Require-Bundle: org.glassfish.jersey.media.jersey-media-json-jackson; bundle-version="2.30.1"
+    -> Bundle-SymbolicName: org.glassfish.jersey.media.jersey-media-json-jackson; bundle-version="2.30.1.v20200513-1859"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"] because it is exposed to package 'javax.xml.bind.annotation' from resources jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"] and org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] via two dependency chains.
+
+Chain 1:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.xml.bind.annotation)(&(version>=2.2.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"]
+
+Chain 2:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.ws.rs)(&(version>=2.1.6)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package=javax.ws.rs; uses:=javax.xml.bind.annotation
+  javax.ws.rs [osgi.identity; type="osgi.bundle"; version:Version="2.1.6.v20200505-2127"; osgi.identity="javax.ws.rs"]
+    import: (osgi.wiring.package=javax.xml.bind.annotation)
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2020-09-16 14:06:16.366
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [363]
+  Unresolved requirement: Require-Bundle: org.mandas.docker-client; bundle-version="3.2.1"
+    -> Bundle-SymbolicName: org.mandas.docker-client; bundle-version="3.2.1.v20200519-1937"
+       org.mandas.docker-client [625]
+         Unresolved requirement: Import-Package: org.glassfish.jersey.jackson; version="2.30.1"
+           -> Export-Package: org.glassfish.jersey.jackson; bundle-symbolic-name="org.glassfish.jersey.media.jersey-media-json-jackson"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs.core"
+              org.glassfish.jersey.media.jersey-media-json-jackson [603]
+                Unresolved requirement: Import-Package: com.fasterxml.jackson.module.jaxb; version="[2.10.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.message.filtering; version="[2.30.0,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.message.filtering; bundle-symbolic-name="org.glassfish.jersey.ext.entityfiltering"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.annotation.security,javax.inject,javax.ws.rs.core,org.glassfish.jersey.message.filtering.spi"
+                     org.glassfish.jersey.ext.entityfiltering [601]
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                            org.glassfish.jersey.core.jersey-server [600]
+                              Unresolved requirement: Import-Package: javax.validation; version="[2.0.0,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.model; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.model; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal.inject,org.glassfish.jersey.message,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.model.internal.spi,org.glassfish.jersey.process,org.glassfish.jersey.server,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model.internal,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.spi,org.glassfish.jersey.uri"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.filter; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.filter; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.ws.rs.container,javax.ws.rs.core,org.glassfish.jersey.server,org.glassfish.jersey.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.message.filtering.spi; version="[2.30.0,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.message.filtering.spi; bundle-symbolic-name="org.glassfish.jersey.ext.entityfiltering"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="org.glassfish.jersey.spi"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.7.0.202006092019"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [360]
+         Unresolved requirement: Require-Bundle: org.mandas.docker-client; bundle-version="3.2.1"
+           -> Bundle-SymbolicName: org.mandas.docker-client; bundle-version="3.2.1.v20200519-1937"
+         Unresolved requirement: Require-Bundle: org.glassfish.jersey.containers.servlet; bundle-version="2.3.0.1"
+           -> Bundle-SymbolicName: org.glassfish.jersey.containers.servlet; bundle-version="2.30.1.v20200513-1859"
+              org.glassfish.jersey.containers.servlet [596]
+                Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal; version="[2.30.1,2.31.0)"
+                  -> Export-Package: org.glassfish.jersey.servlet.internal; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.server,org.glassfish.jersey.server.spi,org.glassfish.jersey.servlet.internal.spi,org.glassfish.jersey.servlet.spi"
+                     org.glassfish.jersey.containers.servlet.core [597]
+                       Unresolved requirement: Import-Package: javax.persistence; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal.scanning; version="[2.30.1,2.31.0)"
+                         -> Export-Package: org.glassfish.jersey.server.internal.scanning; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="org.glassfish.jersey.server,org.glassfish.jersey.server.internal"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.spi; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.spi; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.validation,javax.ws.rs,javax.ws.rs.core,org.glassfish.jersey.internal.inject,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.spi"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal; version="[2.30.1,2.31.0)"
+                         -> Export-Package: org.glassfish.jersey.server.internal; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.annotation,javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.internal.util,org.glassfish.jersey.message.internal,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.spi; version="[2.30.1,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.servlet.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.servlet; version="[2.30.1,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.servlet; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal.spi; version="[2.30.1,2.31.0)"
+                  -> Export-Package: org.glassfish.jersey.servlet.internal.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+         Unresolved requirement: Require-Bundle: org.glassfish.jersey.media.jersey-media-json-jackson; bundle-version="2.30.1"
+           -> Bundle-SymbolicName: org.glassfish.jersey.media.jersey-media-json-jackson; bundle-version="2.30.1.v20200513-1859"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"] because it is exposed to package 'javax.xml.bind.annotation' from resources jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"] and org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] via two dependency chains.
+
+Chain 1:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.xml.bind.annotation)(&(version>=2.2.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"]
+
+Chain 2:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.ws.rs)(&(version>=2.1.6)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package=javax.ws.rs; uses:=javax.xml.bind.annotation
+  javax.ws.rs [osgi.identity; type="osgi.bundle"; version:Version="2.1.6.v20200505-2127"; osgi.identity="javax.ws.rs"]
+    import: (osgi.wiring.package=javax.xml.bind.annotation)
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.linuxtools.jdt.docker.launcher 4 0 2020-09-16 14:06:16.412
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.jdt.docker.launcher [364]
+  Unresolved requirement: Require-Bundle: org.mandas.docker-client
+    -> Bundle-SymbolicName: org.mandas.docker-client; bundle-version="3.2.1.v20200519-1937"
+       org.mandas.docker-client [625]
+         Unresolved requirement: Import-Package: org.glassfish.jersey.jackson; version="2.30.1"
+           -> Export-Package: org.glassfish.jersey.jackson; bundle-symbolic-name="org.glassfish.jersey.media.jersey-media-json-jackson"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs.core"
+              org.glassfish.jersey.media.jersey-media-json-jackson [603]
+                Unresolved requirement: Import-Package: com.fasterxml.jackson.module.jaxb; version="[2.10.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.message.filtering; version="[2.30.0,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.message.filtering; bundle-symbolic-name="org.glassfish.jersey.ext.entityfiltering"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.annotation.security,javax.inject,javax.ws.rs.core,org.glassfish.jersey.message.filtering.spi"
+                     org.glassfish.jersey.ext.entityfiltering [601]
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                            org.glassfish.jersey.core.jersey-server [600]
+                              Unresolved requirement: Import-Package: javax.validation; version="[2.0.0,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.model; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.model; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal.inject,org.glassfish.jersey.message,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.model.internal.spi,org.glassfish.jersey.process,org.glassfish.jersey.server,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model.internal,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.spi,org.glassfish.jersey.uri"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server.filter; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server.filter; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.ws.rs.container,javax.ws.rs.core,org.glassfish.jersey.server,org.glassfish.jersey.spi"
+                Unresolved requirement: Import-Package: org.glassfish.jersey.message.filtering.spi; version="[2.30.0,3.0.0)"
+                  -> Export-Package: org.glassfish.jersey.message.filtering.spi; bundle-symbolic-name="org.glassfish.jersey.ext.entityfiltering"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="org.glassfish.jersey.spi"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.7.0.202006092019"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [363]
+         Unresolved requirement: Require-Bundle: org.mandas.docker-client; bundle-version="3.2.1"
+           -> Bundle-SymbolicName: org.mandas.docker-client; bundle-version="3.2.1.v20200519-1937"
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.7.0.202006092019"; singleton:="true"
+              org.eclipse.linuxtools.docker.core [360]
+                Unresolved requirement: Require-Bundle: org.mandas.docker-client; bundle-version="3.2.1"
+                  -> Bundle-SymbolicName: org.mandas.docker-client; bundle-version="3.2.1.v20200519-1937"
+                Unresolved requirement: Require-Bundle: org.glassfish.jersey.containers.servlet; bundle-version="2.3.0.1"
+                  -> Bundle-SymbolicName: org.glassfish.jersey.containers.servlet; bundle-version="2.30.1.v20200513-1859"
+                     org.glassfish.jersey.containers.servlet [596]
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal; version="[2.30.1,2.31.0)"
+                         -> Export-Package: org.glassfish.jersey.servlet.internal; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.server,org.glassfish.jersey.server.spi,org.glassfish.jersey.servlet.internal.spi,org.glassfish.jersey.servlet.spi"
+                            org.glassfish.jersey.containers.servlet.core [597]
+                              Unresolved requirement: Import-Package: javax.persistence; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal.scanning; version="[2.30.1,2.31.0)"
+                                -> Export-Package: org.glassfish.jersey.server.internal.scanning; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="org.glassfish.jersey.server,org.glassfish.jersey.server.internal"
+                              Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                                -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                              Unresolved requirement: Import-Package: org.glassfish.jersey.server.spi; version="[2.30.1,3.0.0)"
+                                -> Export-Package: org.glassfish.jersey.server.spi; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.validation,javax.ws.rs,javax.ws.rs.core,org.glassfish.jersey.internal.inject,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.spi"
+                              Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal; version="[2.30.1,2.31.0)"
+                                -> Export-Package: org.glassfish.jersey.server.internal; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.annotation,javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.internal.util,org.glassfish.jersey.message.internal,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.spi; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.servlet.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.servlet; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.servlet; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal.spi; version="[2.30.1,2.31.0)"
+                         -> Export-Package: org.glassfish.jersey.servlet.internal.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+                       Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+                         -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+                Unresolved requirement: Require-Bundle: org.glassfish.jersey.media.jersey-media-json-jackson; bundle-version="2.30.1"
+                  -> Bundle-SymbolicName: org.glassfish.jersey.media.jersey-media-json-jackson; bundle-version="2.30.1.v20200513-1859"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.7.0.202006092019"; singleton:="true"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"] because it is exposed to package 'javax.xml.bind.annotation' from resources jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"] and org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] via two dependency chains.
+
+Chain 1:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.xml.bind.annotation)(&(version>=2.2.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"]
+
+Chain 2:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.ws.rs)(&(version>=2.1.6)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package=javax.ws.rs; uses:=javax.xml.bind.annotation
+  javax.ws.rs [osgi.identity; type="osgi.bundle"; version:Version="2.1.6.v20200505-2127"; osgi.identity="javax.ws.rs"]
+    import: (osgi.wiring.package=javax.xml.bind.annotation)
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.glassfish.jersey.containers.servlet 4 0 2020-09-16 14:06:16.639
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.glassfish.jersey.containers.servlet [596]
+  Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal; version="[2.30.1,2.31.0)"
+    -> Export-Package: org.glassfish.jersey.servlet.internal; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.server,org.glassfish.jersey.server.spi,org.glassfish.jersey.servlet.internal.spi,org.glassfish.jersey.servlet.spi"
+       org.glassfish.jersey.containers.servlet.core [597]
+         Unresolved requirement: Import-Package: javax.persistence; resolution:="optional"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal.scanning; version="[2.30.1,2.31.0)"
+           -> Export-Package: org.glassfish.jersey.server.internal.scanning; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="org.glassfish.jersey.server,org.glassfish.jersey.server.internal"
+              org.glassfish.jersey.core.jersey-server [600]
+                Unresolved requirement: Import-Package: javax.validation; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+           -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.server.spi; version="[2.30.1,3.0.0)"
+           -> Export-Package: org.glassfish.jersey.server.spi; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.validation,javax.ws.rs,javax.ws.rs.core,org.glassfish.jersey.internal.inject,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.spi"
+         Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal; version="[2.30.1,2.31.0)"
+           -> Export-Package: org.glassfish.jersey.server.internal; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.annotation,javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.internal.util,org.glassfish.jersey.message.internal,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.spi; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.servlet.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.servlet; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.servlet; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.servlet.internal.spi; version="[2.30.1,2.31.0)"
+    -> Export-Package: org.glassfish.jersey.servlet.internal.spi; bundle-symbolic-name="org.glassfish.jersey.containers.servlet.core"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.servlet,javax.servlet.http,org.glassfish.jersey.server,org.glassfish.jersey.server.spi"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"] because it is exposed to package 'javax.xml.bind.annotation' from resources jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"] and org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] via two dependency chains.
+
+Chain 1:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.xml.bind.annotation)(&(version>=2.2.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"]
+
+Chain 2:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.ws.rs)(&(version>=2.1.6)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package=javax.ws.rs; uses:=javax.xml.bind.annotation
+  javax.ws.rs [osgi.identity; type="osgi.bundle"; version:Version="2.1.6.v20200505-2127"; osgi.identity="javax.ws.rs"]
+    import: (osgi.wiring.package=javax.xml.bind.annotation)
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.glassfish.jersey.containers.servlet.core 4 0 2020-09-16 14:06:16.647
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.glassfish.jersey.containers.servlet.core [597]
+  Unresolved requirement: Import-Package: javax.persistence; resolution:="optional"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal.scanning; version="[2.30.1,2.31.0)"
+    -> Export-Package: org.glassfish.jersey.server.internal.scanning; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="org.glassfish.jersey.server,org.glassfish.jersey.server.internal"
+       org.glassfish.jersey.core.jersey-server [600]
+         Unresolved requirement: Import-Package: javax.validation; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server.spi; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.server.spi; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.validation,javax.ws.rs,javax.ws.rs.core,org.glassfish.jersey.internal.inject,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.spi"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server.internal; version="[2.30.1,2.31.0)"
+    -> Export-Package: org.glassfish.jersey.server.internal; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; x-internal:="true"; uses:="javax.annotation,javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.l10n,org.glassfish.jersey.internal.util,org.glassfish.jersey.message.internal,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.server,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"] because it is exposed to package 'javax.xml.bind.annotation' from resources jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"] and org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] via two dependency chains.
+
+Chain 1:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.xml.bind.annotation)(&(version>=2.2.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"]
+
+Chain 2:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.ws.rs)(&(version>=2.1.6)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package=javax.ws.rs; uses:=javax.xml.bind.annotation
+  javax.ws.rs [osgi.identity; type="osgi.bundle"; version:Version="2.1.6.v20200505-2127"; osgi.identity="javax.ws.rs"]
+    import: (osgi.wiring.package=javax.xml.bind.annotation)
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.glassfish.jersey.ext.entityfiltering 4 0 2020-09-16 14:06:16.654
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.glassfish.jersey.ext.entityfiltering [601]
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.server; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.inject,javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal,org.glassfish.jersey.internal.inject,org.glassfish.jersey.internal.util,org.glassfish.jersey.internal.util.collection,org.glassfish.jersey.message,org.glassfish.jersey.message.internal,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model,org.glassfish.jersey.server.spi,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.uri"
+       org.glassfish.jersey.core.jersey-server [600]
+         Unresolved requirement: Import-Package: javax.validation; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server.model; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.server.model; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.ws.rs,javax.ws.rs.container,javax.ws.rs.core,javax.ws.rs.ext,org.glassfish.jersey,org.glassfish.jersey.internal.inject,org.glassfish.jersey.message,org.glassfish.jersey.model,org.glassfish.jersey.model.internal,org.glassfish.jersey.model.internal.spi,org.glassfish.jersey.process,org.glassfish.jersey.server,org.glassfish.jersey.server.internal,org.glassfish.jersey.server.internal.inject,org.glassfish.jersey.server.internal.process,org.glassfish.jersey.server.model.internal,org.glassfish.jersey.server.spi.internal,org.glassfish.jersey.spi,org.glassfish.jersey.uri"
+  Unresolved requirement: Import-Package: org.glassfish.jersey.server.filter; version="[2.30.1,3.0.0)"
+    -> Export-Package: org.glassfish.jersey.server.filter; bundle-symbolic-name="org.glassfish.jersey.core.jersey-server"; bundle-version="2.30.1.v20200513-1859"; version="2.30.1"; uses:="javax.annotation,javax.ws.rs.container,javax.ws.rs.core,org.glassfish.jersey.server,org.glassfish.jersey.spi"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"] because it is exposed to package 'javax.xml.bind.annotation' from resources jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"] and org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] via two dependency chains.
+
+Chain 1:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.xml.bind.annotation)(&(version>=2.2.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  jakarta.xml.bind [osgi.identity; type="osgi.bundle"; version:Version="2.3.3.v20200525-2159"; osgi.identity="jakarta.xml.bind"]
+
+Chain 2:
+  org.glassfish.jersey.core.jersey-server [osgi.identity; type="osgi.bundle"; version:Version="2.30.1.v20200513-1859"; osgi.identity="org.glassfish.jersey.core.jersey-server"]
+    import: (&(osgi.wiring.package=javax.ws.rs)(&(version>=2.1.6)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package=javax.ws.rs; uses:=javax.xml.bind.annotation
+  javax.ws.rs [osgi.identity; type="osgi.bundle"; version:Version="2.1.6.v20200505-2127"; osgi.identity="javax.ws.rs"]
+    import: (osgi.wiring.package=javax.xml.bind.annotation)
+     |
+    export: osgi.wiring.package: javax.xml.bind.annotation
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.tooling.boot.ls 4 0 2020-09-16 14:06:16.674
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.tooling.boot.ls [658]
+  Unresolved requirement: Require-Bundle: org.springframework.tooling.ls.eclipse.commons; bundle-version="0.2.0"
+    -> Bundle-SymbolicName: org.springframework.tooling.ls.eclipse.commons; bundle-version="4.7.2.202009020949"; singleton:="true"
+       org.springframework.tooling.ls.eclipse.commons [663]
+         Unresolved requirement: Require-Bundle: org.springframework.tooling.jdt.ls.commons
+           -> Bundle-SymbolicName: org.springframework.tooling.jdt.ls.commons; bundle-version="4.7.2.202009020949"
+              org.springframework.tooling.jdt.ls.commons [662]
+                No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.tooling.jdt.ls.commons [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.jdt.ls.commons"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.tooling.jdt.ls.commons [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.jdt.ls.commons"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.tooling.jdt.ls.commons [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.jdt.ls.commons"]
+    require: (osgi.wiring.bundle=io.projectreactor.reactor-core)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.3.1.202003091750-RELEASE"; osgi.wiring.bundle="io.projectreactor.reactor-core"
+  io.projectreactor.reactor-core [osgi.identity; type="osgi.bundle"; version:Version="3.3.1.202003091750-RELEASE"; osgi.identity="io.projectreactor.reactor-core"]
+    import: (osgi.wiring.package=javax.annotation)
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-09-16 14:06:16.691
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.tooling.ls.eclipse.commons [663]
+  Unresolved requirement: Require-Bundle: org.springframework.tooling.jdt.ls.commons
+    -> Bundle-SymbolicName: org.springframework.tooling.jdt.ls.commons; bundle-version="4.7.2.202009020949"
+       org.springframework.tooling.jdt.ls.commons [662]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.tooling.jdt.ls.commons [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.jdt.ls.commons"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.tooling.jdt.ls.commons [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.jdt.ls.commons"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.tooling.jdt.ls.commons [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.jdt.ls.commons"]
+    require: (osgi.wiring.bundle=io.projectreactor.reactor-core)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.3.1.202003091750-RELEASE"; osgi.wiring.bundle="io.projectreactor.reactor-core"
+  io.projectreactor.reactor-core [osgi.identity; type="osgi.bundle"; version:Version="3.3.1.202003091750-RELEASE"; osgi.identity="io.projectreactor.reactor-core"]
+    import: (osgi.wiring.package=javax.annotation)
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.tooling.ls.eclipse.gotosymbol 4 0 2020-09-16 14:06:16.720
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.tooling.ls.eclipse.gotosymbol [664]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.tooling.ls.eclipse.gotosymbol [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.ls.eclipse.gotosymbol"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.tooling.ls.eclipse.gotosymbol [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.ls.eclipse.gotosymbol"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(bundle-version>=3.13.0))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.tooling.ls.eclipse.gotosymbol [osgi.identity; type="osgi.bundle"; version:Version="4.7.2.202009020949"; osgi.identity="org.springframework.tooling.ls.eclipse.gotosymbol"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=io.projectreactor.reactor-core)(bundle-version>=3.0.7))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.3.1.202003091750-RELEASE"; osgi.wiring.bundle="io.projectreactor.reactor-core"
+  io.projectreactor.reactor-core [osgi.identity; type="osgi.bundle"; version:Version="3.3.1.202003091750-RELEASE"; osgi.identity="io.projectreactor.reactor-core"]
+    import: (osgi.wiring.package=javax.annotation)
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.batch 4 0 2020-09-16 14:06:16.746
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.batch [752]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.batch.graph
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.batch.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+       org.springframework.ide.eclipse.config.ui [767]
+         Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+           -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+              org.springframework.ide.eclipse.wizard [783]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+                     org.springframework.ide.eclipse.quickfix [775]
+                       No resolution report for the bundle.  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.bestpractices 4 0 2020-09-16 14:06:16.764
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.bestpractices [764]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+       org.springframework.ide.eclipse.quickfix [775]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.config.ui 4 0 2020-09-16 14:06:16.786
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.config.ui [767]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+       org.springframework.ide.eclipse.wizard [783]
+         Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+           -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+              org.springframework.ide.eclipse.quickfix [775]
+                No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.data.core 4 0 2020-09-16 14:06:16.805
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.data.core [769]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+       org.springframework.ide.eclipse.quickfix [775]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.quickfix 4 0 2020-09-16 14:06:16.838
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.quickfix [775]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui 4 0 2020-09-16 14:06:16.862
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui [780]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.editor [781]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+              org.springframework.ide.eclipse.config.ui [767]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+                     org.springframework.ide.eclipse.wizard [783]
+                       Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                         -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+                            org.springframework.ide.eclipse.quickfix [775]
+                              No resolution report for the bundle.         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.graph
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.graph; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.graph"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.graph [782]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+           -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+           -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui.editor 4 0 2020-09-16 14:06:16.885
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui.editor [781]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+       org.springframework.ide.eclipse.config.ui [767]
+         Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+           -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+              org.springframework.ide.eclipse.wizard [783]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+                     org.springframework.ide.eclipse.quickfix [775]
+                       No resolution report for the bundle.  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui.graph 4 0 2020-09-16 14:06:16.908
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui.graph [782]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.editor [781]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+              org.springframework.ide.eclipse.config.ui [767]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+                     org.springframework.ide.eclipse.wizard [783]
+                       Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                         -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+                            org.springframework.ide.eclipse.quickfix [775]
+                              No resolution report for the bundle.         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.14.202009020636-CI-B2667"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.wizard 4 0 2020-09-16 14:06:16.928
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.wizard [783]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.14.202009020636-CI-B2667"; singleton:="true"
+       org.springframework.ide.eclipse.quickfix [775]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.annotation' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.14.202009020636-CI-B2667"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.context)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.context"
+  org.springframework.context [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.context"]
+    import: (&(osgi.wiring.package=javax.annotation)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.annotation
+  javax.annotation [osgi.identity; type="osgi.bundle"; version:Version="1.3.5.v20200504-1837"; osgi.identity="javax.annotation"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.core.net 1 0 2020-09-16 14:06:43.195
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2020-09-16 14:06:44.171
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2020-09-16 14:06:44.171
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.jface 2 0 2020-09-16 14:06:44.248
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-16 14:06:44.248
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3333245e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@147c4523,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
