@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Home Page</title>
-
+<!--  
 	<script type="text/javascript">
 
 		function validateUsername() {
@@ -21,7 +21,7 @@
 		}
 		
 	</script>
-
+-->
 
 </head>
 <body>
