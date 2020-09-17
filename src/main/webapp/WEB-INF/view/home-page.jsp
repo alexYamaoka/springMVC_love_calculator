@@ -6,12 +6,29 @@
 <head>
 <meta charset="UTF-8">
 <title>Home Page</title>
+
+	<script type="text/javascript">
+
+		function validateUsername() {
+			var userName = document.getElementById('yourName').value;
+
+			if (userName.length < 1) {
+				alert("Your name should be atleast 1 character");
+				return false;
+			}
+			
+			return true;
+		}
+		
+	</script>
+
+
 </head>
 <body>
 	<h1 align="center">Love Calculator</h1>
 	<hr/>
 	
-	<form:form action="process-homepage" method="get" modelAttribute="userInfoDTO">
+	<form:form action="process-homepage" method="get" modelAttribute="userInfoDTO" onSubmit="return validateUsername()">
 		<div align="center">
 			<p>
 				<label for="yourName">Your Name: </label>
