@@ -19,11 +19,17 @@
 	<script type="text/javascript">
 		function validateUsername() {
 			var username = document.getElementById('yourName').value;
+			var crushName = document.getElementById('crushName').value;
 
 			if (username.length < 3) {
 				alert("Your name should be atleast 3 character");
 				return false;
 			}
+			if (crushName.length < 3) {
+				alert("Crush name should be atleast 3 character");
+				return false;
+			}
+			
 			
 			return true;
 		}
@@ -44,6 +50,12 @@
 			<p>
 				<label for="crushName">Crush Name: </label>
 				<form:input id="crushName" path="crushName"/>	
+				<form:errors path="crushName" cssClass="error"/>
+			</p>
+			<p>
+				<form:checkbox id="check" path="agreedToTermsAndCondition"/>
+				<label for="check">I am agreeing that this is for fun</label>
+				<form:errors path="agreedToTermsAndCondition" cssClass="error"/>
 			</p>
 			<input type="submit" value="calculate"/>
 		</div>

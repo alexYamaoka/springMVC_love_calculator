@@ -29,6 +29,8 @@ public class LCAppController {
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
 		
+		System.out.println(userInfoDTO.isAgreedToTermsAndCondition());
+		
 		if (bindingResult.hasErrors()) {
 			List<ObjectError> allErrors = bindingResult.getAllErrors();
 			
