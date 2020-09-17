@@ -1,5 +1,6 @@
 package com.alexyamaoka.lc.api;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 public class UserInfoDTO {
@@ -7,7 +8,9 @@ public class UserInfoDTO {
 	// data transfer object 
 	
 	@NotBlank(message = " * username cannot be blank")	
+	@Min(value = 3, message = " * username should have at least 3 characters")
 	private String username;
+	
 	private String crushName;
 	
 	
