@@ -33,6 +33,7 @@
 			<p>
 				<label for="yourName">Your Name: </label>
 				<form:input id="yourName" path="username"/>	
+				<form:errors path="username"/>
 			</p>
 			<p>
 				<label for="crushName">Crush Name: </label>
