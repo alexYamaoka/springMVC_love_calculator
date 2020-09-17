@@ -1,10 +1,12 @@
 package com.alexyamaoka.lc.api;
 
+import javax.validation.constraints.NotBlank;
+
 public class UserInfoDTO {
 	
 	// data transfer object 
 	
-	
+	@NotBlank(message = "* username cannot be blank")	
 	private String username;
 	private String crushName;
 	
