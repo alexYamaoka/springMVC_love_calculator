@@ -16,5 +16,13 @@ public class RegistrationController {
 		userRegistrationDTO.setUsername("username demo");
 		return "user-registration-page";
 	}
+	
+	@RequestMapping("/registration-success")
+	public String processUserRegistration(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
+		// spring will capture data from url and bind it to userRegistrationDTO automatically
+		
+		
+		return "registration-success";
+	}
 
 }
