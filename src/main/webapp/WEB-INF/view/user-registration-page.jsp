@@ -13,17 +13,36 @@
 		<label for="user">User: </label>
 		<form:input id="user" path="name"/>
 		<br/>
+		
 		<label for="username">Username: </label>
 		<form:input id="username" path="username"/>
 		<br/>
+		
 		<label for="password">Password: </label>
 		<form:password id="passwprd" path="password"/>
 		<br/>
-		<label>Country Name: </label>
-		<form:select path="country">
+		
+		<label for="country">Country Name: </label>
+		<form:select id="country" path="country">
 			<form:option value="U.S" label="U.S"></form:option>
+			<form:option value="Mexico" label="Mexico"></form:option>
 			<form:option value="Japan" label="Japan"></form:option>
+			<form:option value="Canada" label="Canada"></form:option>
+			<form:option value="Spain" label="Spain"></form:option>
+			<form:option value="Germany" label="Germany"></form:option>
+			<form:option value="France" label="France"></form:option>
 		</form:select>
+		<br/>
+		
+		<label>Hobbies:</label>
+		Baseball<form:checkbox path="hobbies" value="baseball"/>
+		Soccer<form:checkbox path="hobbies" value="soccer"/>
+		Surfing<form:checkbox path="hobbies" value="surfing"/>
+		Camping<form:checkbox path="hobbies" value="camping"/>
+		Travel<form:checkbox path="hobbies" value="travel"/>
+		
+		
+		
 		
 	</form:form>
 	 
