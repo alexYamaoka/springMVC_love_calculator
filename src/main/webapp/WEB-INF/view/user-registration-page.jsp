@@ -34,12 +34,18 @@
 		</form:select>
 		<br/>
 		
-		<label>Hobbies:</label>
+		<label>Hobbies: </label>
 		Baseball<form:checkbox path="hobbies" value="baseball"/>
 		Soccer<form:checkbox path="hobbies" value="soccer"/>
 		Surfing<form:checkbox path="hobbies" value="surfing"/>
 		Camping<form:checkbox path="hobbies" value="camping"/>
 		Travel<form:checkbox path="hobbies" value="travel"/>
+		</br>
+		
+		
+		<label>Gender: </label>
+		Male<form:radiobutton path="gender" value="male"/>
+		Female<form:radiobutton path="gender" value="female"/>
 		
 		
 		

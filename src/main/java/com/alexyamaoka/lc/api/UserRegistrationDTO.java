@@ -7,6 +7,7 @@ public class UserRegistrationDTO {
 	private char[] password;
 	private String  country;
 	private String[] hobbies;
+	private String gender;
 	
 	// look up why char array is best for password.  
 	// Since Strings are immutable if you store the password as a String it will be available in memory 
@@ -20,6 +21,8 @@ public class UserRegistrationDTO {
 	
 	
 	
+	
+
 	
 
 	public String getName() {
@@ -41,6 +44,10 @@ public class UserRegistrationDTO {
 	public String[] getHobbies() {
 		return hobbies;
 	}
+	
+	public String getGender() {
+		return gender;
+	}
 
 	public void setName(String name) {
 		this.name = name;
@@ -60,6 +67,10 @@ public class UserRegistrationDTO {
 	
 	public void setHobbies(String[] hobbies) {
 		this.hobbies = hobbies;
+	}
+	
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	
 	
