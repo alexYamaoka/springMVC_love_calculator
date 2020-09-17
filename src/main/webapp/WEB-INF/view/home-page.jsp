@@ -18,10 +18,10 @@
 	
 	<script type="text/javascript">
 		function validateUsername() {
-			var userName = document.getElementById('yourName').value;
+			var username = document.getElementById('yourName').value;
 
-			if (userName.length < 1) {
-				alert("Your name should be atleast 1 character");
+			if (username.length < 3) {
+				alert("Your name should be atleast 3 character");
 				return false;
 			}
 			
@@ -34,7 +34,7 @@
 	<h1 align="center">Love Calculator</h1>
 	<hr/>
 	
-	<form:form action="process-homepage" method="get" modelAttribute="userInfoDTO" > <!--  onSubmit="return validateUsername()" -->
+	<form:form action="process-homepage" method="get" modelAttribute="userInfoDTO" onSubmit="return validateUsername()"> 
 		<div align="center">
 			<p>
 				<label for="yourName">Your Name: </label>
