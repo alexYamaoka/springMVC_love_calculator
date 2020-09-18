@@ -29,8 +29,6 @@
 				alert("Crush name should be atleast 3 character");
 				return false;
 			}
-			
-			
 			return true;
 		}
 	</script>

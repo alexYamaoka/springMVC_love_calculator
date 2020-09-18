@@ -9,20 +9,7 @@ public class UserRegistrationDTO {
 	private String[] hobbies;
 	private String gender;
 	
-	// look up why char array is best for password.  
-	// Since Strings are immutable if you store the password as a String it will be available in memory 
-	// 		until the garbage collector clears it and since String are used in String pool for re-usability there is a 
-	// 		pretty high chance that it will remain in memory for long duration. Since anyone who has accesss to memory dump 
-	// 		can find the password in clear text.
-	// Since Strings are immutable there are no way contents of Strings can be changed because any change will produce a new String.
-	// 
-	// With an array, the data can be wiped explicitly after its work is complete.  The array can be overwritten and the password
-	// 		won't be present anywhere in the system, even before garbage collection.  
 	
-	
-	
-	
-
 	
 
 	public String getName() {
@@ -72,6 +59,16 @@ public class UserRegistrationDTO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
+	// look up why char array is best for password.  
+		// Since Strings are immutable if you store the password as a String it will be available in memory 
+		// 		until the garbage collector clears it and since String are used in String pool for re-usability there is a 
+		// 		pretty high chance that it will remain in memory for long duration. Since anyone who has accesss to memory dump 
+		// 		can find the password in clear text.
+		// Since Strings are immutable there are no way contents of Strings can be changed because any change will produce a new String.
+		// 
+		// With an array, the data can be wiped explicitly after its work is complete.  The array can be overwritten and the password
+		// 		won't be present anywhere in the system, even before garbage collection.  
 	
 	
 	
