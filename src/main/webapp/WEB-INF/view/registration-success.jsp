@@ -21,7 +21,7 @@
 		<br/>
 	Gender:     ${userRegistrationDTO.gender}<br/>
 	Email: 		${userRegistrationDTO.communicationDTO.email} <br/>
-	Phone: 		${userRegistrationDTO.phone}<br/>
+	Phone: 		${userRegistrationDTO.communicationDTO.phone}<br/>
 	
 </body>
 </html>
