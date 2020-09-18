@@ -55,6 +55,9 @@
 			
 			<label for="email">Email</label>
 			<form:input id="email" path="communicationDTO.email"/>
+			
+			<label for="phone">Phone</label>
+			<form:input id="phone" path="communicationDTO.phone"/>
 		</div>
 		
 		<div align="center">
