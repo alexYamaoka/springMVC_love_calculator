@@ -9,6 +9,7 @@ public class UserRegistrationDTO {
 	private String[] hobbies;
 	private String gender;
 	
+	private CommunicationDTO communicationDTO;
 	
 	
 
@@ -35,6 +36,10 @@ public class UserRegistrationDTO {
 	public String getGender() {
 		return gender;
 	}
+	
+	public CommunicationDTO getCommunicationDTO() {
+		return communicationDTO;
+	}
 
 	public void setName(String name) {
 		this.name = name;
@@ -58,6 +63,10 @@ public class UserRegistrationDTO {
 	
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public void setCommunicationDTO(CommunicationDTO communicationDTO) {
+		this.communicationDTO = communicationDTO;
 	}
 	
 	// look up why char array is best for password.  
