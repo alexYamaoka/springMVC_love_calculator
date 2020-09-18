@@ -24,16 +24,22 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 	public Phone parse(String text, Locale locale) throws ParseException {
 		System.out.println("inside parse method of Phone Number Formatter");
 		
-		// logic to separate country code with number  1-310xxxxxxx 
-		String[] phoneNumberArray = text.split("-");
-		Phone phone = new Phone();
-		phone.setCountryCode(phoneNumberArray[0]);
-		phone.setUserNumber(phoneNumberArray[1]);
+		// check whether the number consists of "-" for country code 
+		// if not found, add 1 for default country code 
 		
-		System.out.println("country code: " + phone.getCountryCode());
-		System.out.println("phone number: " + phone.getUserNumber());
+		Phone phone = new Phone();
+		int index = text.indexOf('-');
+		String[] phoneNumberArray = text.split("-");
+		
+		if (index == -1) {
+			phone.setCountryCode("1");
+			phone.setUserNumber(phoneNumberArray[0]);
+		}
+		else {
+			phone.setCountryCode(phoneNumberArray[0]);
+			phone.setUserNumber(phoneNumberArray[1]);
+		}
 		
 		return phone;
 	}
-
 }

@@ -19,10 +19,8 @@ public class RegistrationController {
 		Phone phone = new Phone();
 		phone.setCountryCode("91");
 		phone.setUserNumber("2229995555");
-		
 		CommunicationDTO communicationDTO = new CommunicationDTO();
 		communicationDTO.setPhone(phone);
-		
 		userRegistrationDTO.setCommunicationDTO(communicationDTO);
 
 		return "user-registration-page";
