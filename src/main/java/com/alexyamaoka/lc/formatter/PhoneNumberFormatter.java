@@ -20,6 +20,7 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 		return phoneNumber;
 	}
 
+	
 	@Override
 	public Phone parse(String text, Locale locale) throws ParseException {
 		System.out.println("inside parse method of Phone Number Formatter");
@@ -31,9 +32,17 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 		int index = text.indexOf('-');
 		String[] phoneNumberArray = text.split("-");
 		
-		if (index == -1) {
+		if (index == -1 || text.startsWith("-")) {
 			phone.setCountryCode("1");
-			phone.setUserNumber(phoneNumberArray[0]);
+			
+			
+			if (text.startsWith("-")) {
+				phone.setUserNumber(phoneNumberArray[1]);
+			}
+			else {
+				phone.setUserNumber(phoneNumberArray[0]);
+			}
+			
 		}
 		else {
 			phone.setCountryCode(phoneNumberArray[0]);
