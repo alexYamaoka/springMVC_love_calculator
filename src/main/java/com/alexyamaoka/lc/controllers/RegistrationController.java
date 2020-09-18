@@ -12,9 +12,7 @@ public class RegistrationController {
 	
 	@RequestMapping("/register")
 	public String showRegistrationPage(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
-		// example to show data binding
-		//userRegistrationDTO.setName("name demo");
-		//userRegistrationDTO.setUsername("username demo");
+		System.out.println("inside show registration page method");
 		return "user-registration-page";
 	}
 	
@@ -23,6 +21,7 @@ public class RegistrationController {
 	public String processUserRegistration(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
 		// spring will capture data from url and bind it to userRegistrationDTO automatically
 		
+		System.out.println("inside process user registration method");
 		return "registration-success";
 	}
 }

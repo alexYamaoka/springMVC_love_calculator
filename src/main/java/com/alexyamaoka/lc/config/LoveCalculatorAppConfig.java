@@ -30,6 +30,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	// let spring know to use formatter for phone number
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
+		System.out.println("inside add formatters method");
 		registry.addFormatter(new PhoneNumberFormatter());
 	}
 }
