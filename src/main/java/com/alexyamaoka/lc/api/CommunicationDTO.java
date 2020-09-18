@@ -2,7 +2,7 @@ package com.alexyamaoka.lc.api;
 
 public class CommunicationDTO {
 	
-	private String email;
+	private String email = "email@email.com";
 	
 	
 	public String getEmail() {
