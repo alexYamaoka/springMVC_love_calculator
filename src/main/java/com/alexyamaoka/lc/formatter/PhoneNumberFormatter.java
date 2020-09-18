@@ -11,8 +11,13 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 
 	@Override
 	public String print(Phone object, Locale locale) {
-		// TODO Auto-generated method stub
-		return null;
+		// need to use print for data binding.
+		// program flow reaches print method when data binding
+		
+		System.out.println("inside the print method of phone number formatter");
+		String phoneNumber = object.getCountryCode() + " " + object.getUserNumber();
+		
+		return phoneNumber;
 	}
 
 	@Override
