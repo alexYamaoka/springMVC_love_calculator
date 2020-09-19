@@ -22,6 +22,11 @@ public class PaymentAmount {
 	public void setLocaleDefinition(String localeDefinition) {
 		this.localeDefinition = localeDefinition;
 	}
+
+	@Override
+	public String toString() {
+		return billAmount + " " + localeDefinition;
+	}
 	
 	
 }
