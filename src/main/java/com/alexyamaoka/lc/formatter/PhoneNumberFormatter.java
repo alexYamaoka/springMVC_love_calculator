@@ -35,7 +35,6 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 		if (index == -1 || text.startsWith("-")) {
 			phone.setCountryCode("1");
 			
-			
 			if (text.startsWith("-")) {
 				phone.setUserNumber(phoneNumberArray[1]);
 			}
