@@ -3,6 +3,7 @@ package com.alexyamaoka.lc.api;
 import java.math.BigDecimal;
 
 public class PaymentAmount {
+	
 	private BigDecimal billAmount;
 	private String localeDefinition;
 	

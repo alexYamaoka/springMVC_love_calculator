@@ -1,6 +1,7 @@
 package com.alexyamaoka.lc.api;
 
 public class CreditCard {
+	
 	private int firstFourDigits;
 	private int secondFourDigits;
 	private int thirdFourDigits;

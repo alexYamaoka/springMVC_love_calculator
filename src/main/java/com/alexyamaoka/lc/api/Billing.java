@@ -1,6 +1,7 @@
 package com.alexyamaoka.lc.api;
 
 public class Billing {
+	
 	private CreditCard creditCard;
 	private PaymentAmount paymentAmount;
 	
@@ -20,6 +21,4 @@ public class Billing {
 	public void setPaymentAmount(PaymentAmount paymentAmount) {
 		this.paymentAmount = paymentAmount;
 	}
-	
-	
 }
