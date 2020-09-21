@@ -1,6 +1,9 @@
 package com.alexyamaoka.lc.api;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.NumberFormat;
+import java.util.Currency;
 
 public class PaymentAmount {
 	
@@ -26,7 +29,10 @@ public class PaymentAmount {
 
 	@Override
 	public String toString() {
-		return billAmount + " " + localeDefinition;
+		
+		Currency currency = Currency.getInstance(localeDefinition);
+		
+		return currency.getSymbol() + " " + billAmount;
 	}
 	
 	
