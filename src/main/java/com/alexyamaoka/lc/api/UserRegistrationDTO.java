@@ -8,7 +8,10 @@ public class UserRegistrationDTO {
 	private String  country;
 	private String[] hobbies;
 	private String gender;
+	private int age;
 	
+	
+
 	private CommunicationDTO communicationDTO;
 	
 	
@@ -37,6 +40,10 @@ public class UserRegistrationDTO {
 		return gender;
 	}
 	
+	public int getAge() {
+		return age;
+	}
+
 	public CommunicationDTO getCommunicationDTO() {
 		return communicationDTO;
 	}
@@ -63,6 +70,10 @@ public class UserRegistrationDTO {
 	
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public void setCommunicationDTO(CommunicationDTO communicationDTO) {

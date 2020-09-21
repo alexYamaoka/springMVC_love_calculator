@@ -48,6 +48,9 @@
 			Male<form:radiobutton path="gender" value="male"/>
 			Female<form:radiobutton path="gender" value="female"/>
 			<br/>
+			
+			<label for="age">Age: </label>
+			<form:input id="age" path="age"/>
 		</div>
 		
 		<div align="center">

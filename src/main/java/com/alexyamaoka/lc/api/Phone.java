@@ -1,6 +1,7 @@
 package com.alexyamaoka.lc.api;
 
 public class Phone {
+
 	private String countryCode;
 	private String userNumber;
 	
