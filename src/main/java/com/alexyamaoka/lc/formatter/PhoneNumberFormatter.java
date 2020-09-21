@@ -2,10 +2,9 @@ package com.alexyamaoka.lc.formatter;
 
 import java.text.ParseException;
 import java.util.Locale;
-
 import org.springframework.format.Formatter;
-
 import com.alexyamaoka.lc.api.Phone;
+
 
 public class PhoneNumberFormatter implements Formatter<Phone>{
 
@@ -13,6 +12,7 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 	public String print(Phone object, Locale locale) {
 		// need to use print for data binding.
 		// program flow reaches print method when data binding
+		// ex when user already filled out form and fills it in again
 		
 		System.out.println("inside the print method of phone number formatter");
 		String phoneNumber = object.getCountryCode() + " " + object.getUserNumber();
