@@ -10,7 +10,7 @@ public class UserRegistrationDTO {
 	private String gender;
 	
 	//@AgeValidator(lower = 18, upper = 60, message = "the age should be between 18 - 60")
-	private int age;
+	private Integer age;
 	
 	
 
@@ -42,7 +42,7 @@ public class UserRegistrationDTO {
 		return gender;
 	}
 	
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
@@ -74,7 +74,7 @@ public class UserRegistrationDTO {
 		this.gender = gender;
 	}
 	
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
