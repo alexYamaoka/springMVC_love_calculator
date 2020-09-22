@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -33,13 +34,25 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	}
 	
 	
+	// for validation message - messages.properties file 
 	@Bean(name = "messageSource")
 	public MessageSource messageSource() {
 		
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		messageSource.setBasename("messages");	// messages.properties file
+		messageSource.setBasename("messages");	
 		
 		return messageSource;
+	}
+	
+	
+	// validator bean - tell spring we are using message source method 
+	@Bean("validator")
+	public LocalValidatorFactoryBean validator() {
+		
+		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+		localValidatorFactoryBean.setValidationMessageSource(messageSource());
+		
+		return localValidatorFactoryBean;
 	}
 	
 	
