@@ -1,6 +1,13 @@
 package com.alexyamaoka.lc.controllers;
 
+
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -28,10 +35,25 @@ public class RegistrationController {
 	
 	
 	@RequestMapping("/registration-success")
-	public String processUserRegistration(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
+	public String processUserRegistration(@Valid @ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO, BindingResult bindingResult) {
 		// spring will capture data from url and bind it to userRegistrationDTO automatically
 		
 		System.out.println("inside process user registration method");
+		
+		if (bindingResult.hasErrors()) {
+			
+			System.out.println("Age field has errors");
+			
+			List<ObjectError> allErrors = bindingResult.getAllErrors();
+			
+			for (ObjectError error: allErrors) {
+				System.out.println(error);
+			}
+			
+			return "user-registration-page";
+		}
+		
+		
 		
 		// save the dto object in the database 
 		

@@ -5,7 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Registration</title>
-</head>
+
+	<style type="text/css">
+			.error{
+				color: red;
+				position: fixed;
+				text-align: left;
+				margin-left: 30px;
+			}
+		</style>
+	</head>
 <body>
 	<h1 align="center">Please Register Here</h1>
 	
@@ -51,6 +60,7 @@
 			
 			<label for="age">Age: </label>
 			<form:input id="age" path="age"/>
+			<form:errors path="age"cssClass="error"/>
 		</div>
 		
 		<div align="center">

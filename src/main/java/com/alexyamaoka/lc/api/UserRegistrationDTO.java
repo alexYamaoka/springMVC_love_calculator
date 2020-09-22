@@ -1,5 +1,7 @@
 package com.alexyamaoka.lc.api;
 
+import com.alexyamaoka.lc.validator.Age;
+
 public class UserRegistrationDTO {
 	
 	private String name;
@@ -9,7 +11,7 @@ public class UserRegistrationDTO {
 	private String[] hobbies;
 	private String gender;
 	
-	//@AgeValidator(lower = 18, upper = 60, message = "the age should be between 18 - 60")
+	@Age(lower = 18, upper = 60, message = "the age should be between 18 - 60")
 	private Integer age;
 	
 	
