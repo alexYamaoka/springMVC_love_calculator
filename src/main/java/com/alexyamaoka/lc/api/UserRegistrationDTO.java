@@ -11,7 +11,7 @@ public class UserRegistrationDTO {
 	private String[] hobbies;
 	private String gender;
 	
-	@Age(lower = 18, upper = 60, message = "the age should be between 18 - 60")
+	@Age(lower = 20, upper = 80)
 	private Integer age;
 	
 	
