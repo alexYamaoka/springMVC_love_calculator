@@ -8,6 +8,8 @@ public class UserRegistrationDTO {
 	private String  country;
 	private String[] hobbies;
 	private String gender;
+	
+	//@AgeValidator(lower = 18, upper = 60, message = "the age should be between 18 - 60")
 	private int age;
 	
 	

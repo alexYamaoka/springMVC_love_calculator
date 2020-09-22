@@ -38,7 +38,7 @@
 	<h1 align="center">Love Calculator</h1>
 	<hr/>
 	
-	<form:form action="process-homepage" method="get" modelAttribute="userInfoDTO" onSubmit="return validateUsername()"> 
+	<form:form action="process-homepage" method="get" modelAttribute="userInfoDTO" > <!--onSubmit="return validateUsername()" -->
 		<div align="center">
 			<p>
 				<label for="yourName">Your Name: </label>
