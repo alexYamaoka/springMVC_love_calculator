@@ -18,7 +18,9 @@ import javax.validation.Payload;
 @Constraint(validatedBy = AgeValidator.class)
 public @interface Age {
 
-	String message() default "Age should be between {lower} and {upper}";		// dynamically loading lower and upper value 
+	String message() default "{Age.userRegistrationDTO.age}";				
+	
+	// to dynamically load lower and upper value: String message() default "Age should be between {lower} and {upper}"
 
 	int lower() default 18;
 
