@@ -15,7 +15,7 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 		// ex when user already filled out form and fills it in again
 		
 		System.out.println("inside the print method of phone number formatter");
-		String phoneNumber = object.getCountryCode() + " " + object.getUserNumber();
+		String phoneNumber = object.getCountryCode() + "-" + object.getUserNumber();
 		
 		return phoneNumber;
 	}

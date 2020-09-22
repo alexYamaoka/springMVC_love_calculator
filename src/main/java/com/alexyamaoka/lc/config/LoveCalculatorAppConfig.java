@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -57,12 +58,20 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	
 	
 	
-	// let spring know to use formatter for phone number
+	// let spring know to use formatter for phone number, etc...
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
 		System.out.println("inside add formatters method");
 		registry.addFormatter(new PhoneNumberFormatter());
 		registry.addFormatter(new CreditCardFormatter());
 		registry.addFormatter(new CurrencyFormatter());
+	}
+	
+	
+	// tell spring to use our custom validator
+	@Override
+	public Validator getValidator() {
+		
+		return validator();
 	}
 }
