@@ -9,6 +9,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import javax.validation.Payload;
+
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
@@ -18,6 +20,9 @@ public @interface AgeValidator {
 	int lower() default 18;
 	int upper() default 60;
 	
+	Class<?>[] groups() default { };
+
+	Class<? extends Payload>[] payload() default { };
 	
 
 }
