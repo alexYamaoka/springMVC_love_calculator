@@ -13,8 +13,8 @@
 				text-align: left;
 				margin-left: 30px;
 			}
-		</style>
-	</head>
+	</style>
+</head>
 <body>
 	<h1 align="center">Please Register Here</h1>
 	
@@ -60,7 +60,7 @@
 			
 			<label for="age">Age: </label>
 			<form:input id="age" path="age"/>
-			<form:errors path="age"cssClass="error"/>
+			<form:errors path="age" cssClass="error"/>
 		</div>
 		
 		<div align="center">
