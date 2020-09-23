@@ -12,11 +12,14 @@
 	
 	
 	<div align="center">
-		<p>
-			<h2>The Love Calculator Predicts...</h2>
-			${userInfoDTO.username} and ${userInfoDTO.crushName} are <br/>
-			${result}
-		</p>
+		
+		<h2>The Love Calculator Predicts...</h2>
+		${userInfoDTO.username} and ${userInfoDTO.crushName} are <br/>
+		FRIENDS!
+		<br/><br/>
+		
+		
+		<a href="#">Send results to your Email</a>
 	</div>
 	
 </body>

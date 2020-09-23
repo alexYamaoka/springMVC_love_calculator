@@ -42,7 +42,10 @@ public class LCAppController {
 		}
 		
 		
-		// calculate result
+		// calculate love percentage between two names
+		
+		
+		
 		
 		return "result-page";
 	}	
