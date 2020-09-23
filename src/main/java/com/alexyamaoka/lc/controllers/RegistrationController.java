@@ -72,11 +72,20 @@ public class RegistrationController {
 		// 1) init binder
 		// 2) handler method 
 		
+		
+		// Property Editor
+		// Spring uses property editors to convert strings to object types and object types to Strings
+		
+		// WebDataBinder
+		// binder that is responsible for setting property values on to a target object
+		
+		
 		// ex: don't want to bind specific data fields such as name
 		// webDataBinder.setDisallowedFields("name");
 		
-		// ex: Property Editor
-		// to trim white spaces if user enters a bunch of spaces
+		
+		
+		// to trim white spaces if user enters a bunch of spaces.  
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		webDataBinder.registerCustomEditor(String.class, "name", stringTrimmerEditor);
 		
