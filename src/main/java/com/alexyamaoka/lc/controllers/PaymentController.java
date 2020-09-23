@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alexyamaoka.lc.api.BillDTO;
+import com.alexyamaoka.lc.api.CreditCard;
 import com.alexyamaoka.lc.formatter.CreditCardFormatter;
 import com.alexyamaoka.lc.formatter.CurrencyFormatter;
 import com.alexyamaoka.lc.formatter.PhoneNumberFormatter;
@@ -28,6 +29,14 @@ public class PaymentController {
 	
 	@RequestMapping("/payment")
 	public String showPaymentPage(@ModelAttribute("billDTO") BillDTO billDTO) {
+		
+		CreditCard creditCard = new CreditCard();
+		creditCard.setFirstFourDigits(1111);
+		creditCard.setSecondFourDigits(2222);
+		creditCard.setThirdFourDigits(3333);
+		creditCard.setFourthFourDigits(4444);
+		
+		billDTO.setCreditCard(creditCard);
 		
 		return "payment-page";
 	}
