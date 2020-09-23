@@ -23,7 +23,7 @@ import com.alexyamaoka.lc.formatter.PhoneNumberFormatter;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "com.alexyamaoka.lc.controllers")
+@ComponentScan(basePackages = {"com.alexyamaoka.lc.controllers", "com.alexyamaoka.lc.validator"})
 public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	
 	// set up view resolver
