@@ -11,8 +11,8 @@
 	<div align="center">
 		<h1>Processing Payment Page</h1>
 		Credit Card: ${billDTO.creditCard}<br/>
-		Amount: 	 ${billDTO.amount}<br/>
-		Currency: 	 ${billDTO.currency}<br/>
+		Amount: 	 ${billDTO.currency.symbol} ${billDTO.amount}<br/>
+		Currency: 	 ${billDTO.currency.displayName}<br/>
 		Date: 		 ${billDTO.date}<br/>
 	
 	</div>
