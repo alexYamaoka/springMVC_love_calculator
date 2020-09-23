@@ -20,6 +20,7 @@ import com.alexyamaoka.lc.api.Phone;
 import com.alexyamaoka.lc.api.UserRegistrationDTO;
 import com.alexyamaoka.lc.propertyEditor.CreditCardEditor;
 import com.alexyamaoka.lc.propertyEditor.NamePropertyEditor;
+import com.alexyamaoka.lc.validator.UsernameValidator;
 
 @Controller
 public class RegistrationController {
@@ -102,8 +103,10 @@ public class RegistrationController {
 		webDataBinder.registerCustomEditor(String.class, "name", namePropertyEditor);
 		
 		
-		// CreditCardEditor creditCardEditor = new CreditCardEditor();
-		// webDataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
+		
+		// add custom validator
+		UsernameValidator usernameValidator = new UsernameValidator();
+		webDataBinder.addValidators(usernameValidator);
 		
 		
 
