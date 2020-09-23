@@ -79,6 +79,10 @@ public class RegistrationController {
 		// WebDataBinder
 		// binder that is responsible for setting property values on to a target object
 		// setting form fields into beans
+		// - custom editors
+		// - Validators
+		// - required properties
+		// - allowed/disallowed properties
 		
 		// initBinder initializes webDataBinder
 		
