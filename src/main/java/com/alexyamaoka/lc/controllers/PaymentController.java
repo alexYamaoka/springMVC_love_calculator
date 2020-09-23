@@ -1,6 +1,8 @@
 package com.alexyamaoka.lc.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -17,10 +19,14 @@ public class PaymentController {
 		return "payment-page";
 	}
 	
-	
 	@RequestMapping("/process-payment")
 	public String processPayment(@ModelAttribute("billDTO") BillDTO billDTO) {
 		
 		return "process-payment";
+	}
+	
+	@InitBinder
+	public void initBinder(WebDataBinder webDataBinder) {
+		System.out.println("inside init binder of payment controller");
 	}
 }

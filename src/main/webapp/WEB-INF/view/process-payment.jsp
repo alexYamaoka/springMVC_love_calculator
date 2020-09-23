@@ -16,7 +16,5 @@
 		Date: 		 ${billDTO.date}<br/>
 	
 	</div>
-	
-	
 </body>
 </html>
