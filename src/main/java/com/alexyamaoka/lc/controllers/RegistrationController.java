@@ -78,7 +78,9 @@ public class RegistrationController {
 		
 		// WebDataBinder
 		// binder that is responsible for setting property values on to a target object
+		// setting form fields into beans
 		
+		// initBinder initializes webDataBinder
 		
 		// ex: don't want to bind specific data fields such as name
 		// webDataBinder.setDisallowedFields("name");
