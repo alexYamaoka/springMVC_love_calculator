@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alexyamaoka.lc.api.CommunicationDTO;
+import com.alexyamaoka.lc.api.CreditCard;
 import com.alexyamaoka.lc.api.Phone;
 import com.alexyamaoka.lc.api.UserRegistrationDTO;
+import com.alexyamaoka.lc.propertyEditor.CreditCardEditor;
 import com.alexyamaoka.lc.propertyEditor.NamePropertyEditor;
 
 @Controller
@@ -99,6 +101,9 @@ public class RegistrationController {
 		NamePropertyEditor namePropertyEditor = new NamePropertyEditor();
 		webDataBinder.registerCustomEditor(String.class, "name", namePropertyEditor);
 		
+		
+		// CreditCardEditor creditCardEditor = new CreditCardEditor();
+		// webDataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
 		
 		
 		
