@@ -41,6 +41,9 @@ public class LCAppController {
 			return "home-page";
 		}
 		
+		
+		// calculate result
+		
 		return "result-page";
 	}	
 }
