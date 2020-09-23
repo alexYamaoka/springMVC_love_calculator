@@ -49,6 +49,10 @@ public class RegistrationController {
 		System.out.println("inside process user registration method");
 		System.out.println("Name value entered by the user is: " + "|" + userRegistrationDTO.getName() + "|");
 		
+		// can call validator manually from controller method 
+		EmailValidator emailValidator = new EmailValidator();
+		emailValidator.validate(userRegistrationDTO, bindingResult);
+		
 		if (bindingResult.hasErrors()) {
 			
 			System.out.println("Age field has errors");
@@ -109,8 +113,8 @@ public class RegistrationController {
 		UsernameValidator usernameValidator = new UsernameValidator();
 		webDataBinder.addValidators(usernameValidator);
 		
-		EmailValidator emailValidator = new EmailValidator();
-		webDataBinder.addValidators(emailValidator);
+		// EmailValidator emailValidator = new EmailValidator();
+		// webDataBinder.addValidators(emailValidator);
 		
 		
 
