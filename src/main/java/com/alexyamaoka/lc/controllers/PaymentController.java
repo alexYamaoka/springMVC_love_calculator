@@ -34,7 +34,7 @@ public class PaymentController {
 		System.out.println("inside init binder of payment controller");
 		
 		// property editor
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm-dd-yyyy");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
 		CustomDateEditor customDateEditor = new CustomDateEditor(simpleDateFormat, true);
 		webDataBinder.registerCustomEditor(Date.class, "date", customDateEditor);
 		
