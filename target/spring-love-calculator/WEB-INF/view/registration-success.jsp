@@ -20,6 +20,9 @@
 		</c:forEach>
 		<br/>
 	Gender:     ${userRegistrationDTO.gender}<br/>
+	Age: 		${userRegistrationDTO.age}<br/>
+	Email: 		${userRegistrationDTO.communicationDTO.email} <br/>
+	Phone: 		${userRegistrationDTO.communicationDTO.phone}<br/>
 	
 </body>
 </html>

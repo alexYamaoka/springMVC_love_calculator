@@ -15,4 +15,11 @@ public class EmailController {
 		return "send-email-page";
 	}
 	
+	
+	@RequestMapping("/process-email")
+	public String processEmail(@ModelAttribute("emailDTO") EmailDTO emailDTO) {
+		
+		return "process-email-page";
+	}
+	
 }

@@ -5,6 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Registration</title>
+	<style type="text/css">
+			.error{
+				color: red;
+				position: fixed;
+				text-align: left;
+				margin-left: 30px;
+			}
+	</style>
 </head>
 <body>
 	<h1 align="center">Please Register Here</h1>
@@ -12,12 +20,14 @@
 	
 	<form:form action="registration-success" method="GET" modelAttribute="userRegistrationDTO">
 		<div align="center">
-			<label for="user">User: </label>
-			<form:input id="user" path="name"/>
+			<label for="name">User: </label>
+			<form:input id="name" path="name"/>
+			<form:errors path="name" cssClass="error" />
 			<br/>
 			
 			<label for="username">Username: </label>
 			<form:input id="username" path="username"/>
+			<form:errors path="username" cssClass="error" />
 			<br/>
 			
 			<label for="password">Password: </label>
@@ -49,8 +59,27 @@
 			Female<form:radiobutton path="gender" value="female"/>
 			<br/>
 			
+			<label for="age">Age: </label>
+			<form:input id="age" path="age"/>
+			<form:errors path="age" cssClass="error"/>
+		</div>
+		
+		<div align="center">
+			<h2>Communication:</h2>
+			
+			<label for="email">Email</label>
+			<form:input id="email" path="communicationDTO.email"/>
+			<form:errors path="communicationDTO.email" cssClass="error"/>
+			<br/>
+			
+			<label for="phone">Phone</label>
+			<form:input id="phone" path="communicationDTO.phone"/>
+		</div>
+		
+		<div align="center">
 			<input type="submit" value="register">
 		</div>
+		
 
 	</form:form>
 	 

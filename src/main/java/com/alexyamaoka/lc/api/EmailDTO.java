@@ -11,5 +11,10 @@ public class EmailDTO {
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
+
+	@Override
+	public String toString() {
+		return userEmail;
+	}
 	
 }

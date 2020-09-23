@@ -9,13 +9,17 @@
 	<h1 align="center">Love Calculator</h1>
 	<hr/>
 	
+	
+	
 	<div align="center">
-		<p>
-			Your Name: ${userInfoDTO.username}
-		</p>
-		<p>
-			Crush Name: ${userInfoDTO.crushName}
-		</p>
+		
+		<h2>The Love Calculator Predicts...</h2>
+		${userInfoDTO.username} and ${userInfoDTO.crushName} are <br/>
+		FRIENDS!
+		<br/><br/>
+		
+		
+		<a href="#">Send results to your Email</a>
 	</div>
 	
 </body>
