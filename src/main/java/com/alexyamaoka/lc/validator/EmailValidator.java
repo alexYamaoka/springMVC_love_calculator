@@ -1,5 +1,6 @@
 package com.alexyamaoka.lc.validator;
 
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
@@ -7,6 +8,7 @@ import org.springframework.validation.Validator;
 import com.alexyamaoka.lc.api.CommunicationDTO;
 import com.alexyamaoka.lc.api.UserRegistrationDTO;
 
+@Component
 public class EmailValidator implements Validator {
 
 	@Override

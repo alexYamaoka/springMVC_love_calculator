@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -25,6 +26,9 @@ import com.alexyamaoka.lc.validator.UsernameValidator;
 
 @Controller
 public class RegistrationController {
+	
+	@Autowired
+	private EmailValidator emailValidator;
 	
 	@RequestMapping("/register")
 	public String showRegistrationPage(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
@@ -50,7 +54,7 @@ public class RegistrationController {
 		System.out.println("Name value entered by the user is: " + "|" + userRegistrationDTO.getName() + "|");
 		
 		// can call validator manually from controller method 
-		EmailValidator emailValidator = new EmailValidator();
+		// EmailValidator emailValidator = new EmailValidator(); 
 		emailValidator.validate(userRegistrationDTO, bindingResult);
 		
 		if (bindingResult.hasErrors()) {
