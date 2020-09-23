@@ -1,9 +1,13 @@
 package com.alexyamaoka.lc.controllers;
 
+import java.math.BigDecimal;
 import java.sql.Date;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -34,10 +38,25 @@ public class PaymentController {
 		System.out.println("inside init binder of payment controller");
 		
 		// property editor
+		
+		// editor for the date field
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
 		CustomDateEditor customDateEditor = new CustomDateEditor(simpleDateFormat, true);
 		webDataBinder.registerCustomEditor(Date.class, "date", customDateEditor);
 		
 		
+		// register a custom editor for the amount field
+		NumberFormat numberFormat = new DecimalFormat("##,###.00");
+		CustomNumberEditor customNumberEditor = new CustomNumberEditor(BigDecimal.class, numberFormat, true);
+		webDataBinder.registerCustomEditor(BigDecimal.class, "amount", customNumberEditor);
+		
 	}
 }
+
+
+
+
+
+
+
+
