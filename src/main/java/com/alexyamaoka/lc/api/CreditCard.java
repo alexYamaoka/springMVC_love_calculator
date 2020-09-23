@@ -2,49 +2,46 @@ package com.alexyamaoka.lc.api;
 
 public class CreditCard {
 	
-	private int firstFourDigits;
-	private int secondFourDigits;
-	private int thirdFourDigits;
-	private int fourthFourDigits;
+	private Integer firstFourDigits;
+	private Integer secondFourDigits;
+	private Integer thirdFourDigits;
+	private Integer fourthFourDigits;
 	
-	
-	public int getFirstFourDigits() {
+
+	public Integer getFirstFourDigits() {
 		return firstFourDigits;
 	}
-	
-	public int getSecondFourDigits() {
+
+	public Integer getSecondFourDigits() {
 		return secondFourDigits;
 	}
-	
-	public int getThirdFourDigits() {
+
+	public Integer getThirdFourDigits() {
 		return thirdFourDigits;
 	}
-	
-	public int getFourthFourDigits() {
+
+	public Integer getFourthFourDigits() {
 		return fourthFourDigits;
 	}
-	
-	public void setFirstFourDigits(int firstFourDigits) {
+
+	public void setFirstFourDigits(Integer firstFourDigits) {
 		this.firstFourDigits = firstFourDigits;
 	}
-	
-	public void setSecondFourDigits(int secondFourDigits) {
+
+	public void setSecondFourDigits(Integer secondFourDigits) {
 		this.secondFourDigits = secondFourDigits;
 	}
-	
-	public void setThirdFourDigits(int thirdFourDigits) {
+
+	public void setThirdFourDigits(Integer thirdFourDigits) {
 		this.thirdFourDigits = thirdFourDigits;
 	}
-	
-	public void setFourthFourDigits(int fourthFourDigits) {
+
+	public void setFourthFourDigits(Integer fourthFourDigits) {
 		this.fourthFourDigits = fourthFourDigits;
 	}
 
 	@Override
 	public String toString() {
-		return firstFourDigits + " " + secondFourDigits + " " + thirdFourDigits + " " + fourthFourDigits;
+		return firstFourDigits + "-" + secondFourDigits + "-" + thirdFourDigits + "-" + fourthFourDigits;
 	}
-	
-	
-	
 }
