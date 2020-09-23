@@ -9,10 +9,11 @@
 </head>
 <body>
 	<h1>Processing Payment Page</h1>
-	${billing.creditCard}<br/>
+	Credit Card: ${billDTO.creditCard}<br/>
+	Amount: 	 ${billDTO.amount}<br/>
+	Currency: 	 ${billDTO.currency}<br/>
+	Date: 		 ${billDTO.date}<br/>
 	
-	
-	${billing.paymentAmount}<br/>
 	
 	
 </body>

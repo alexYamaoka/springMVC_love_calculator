@@ -9,22 +9,24 @@
 <body>
 	<h1 align="center">This is the payment page</h1>
 	
-	<form:form action="process-payment" method="get" modelAttribute="billing">
+	<form:form action="process-payment" method="get" modelAttribute="billDTO">
 		<div align="center">
 			<h2>Billing</h2>
 			<p>
-				<label for="cardNumber">Card Number: </label>
-				<form:input  id="cardNumber" path="creditCard"/>
+				<label for="creditCard">Card Number: </label>
+				<form:input  id="creditCard" path="creditCard"/>
 			</p>	
 			<p>
 				<label for="billingAmount">Amount</label>
-				<form:input id="billingAmount" path="paymentAmount" />
+				<form:input id="billingAmount" path="amount" />
 			</p>
 			<p>
-				<label>Currency</label>
+				<label for="currency">Currency</label>
+				<form:input id="currency" path="currency"/>
 			</p>
 			<p>
-				<label>Date</label>
+				<label for="date">Date</label>
+				<form:input id="date" path="date"/>
 			</p>
 		</div>
 		

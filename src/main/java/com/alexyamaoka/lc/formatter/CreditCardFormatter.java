@@ -31,8 +31,6 @@ public class CreditCardFormatter implements Formatter<CreditCard>{
 		creditCard.setThirdFourDigits(Integer.parseInt(cardNumberArray[2]));
 		creditCard.setFourthFourDigits(Integer.parseInt(cardNumberArray[3]));
 		
-		
 		return creditCard;
 	}
-
 }
