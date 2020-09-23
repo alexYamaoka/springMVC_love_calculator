@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.Currency;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alexyamaoka.lc.api.BillDTO;
+import com.alexyamaoka.lc.propertyEditor.MyCurrencyEditor;
 
 
 
@@ -50,6 +52,10 @@ public class PaymentController {
 		CustomNumberEditor customNumberEditor = new CustomNumberEditor(BigDecimal.class, numberFormat, true);
 		webDataBinder.registerCustomEditor(BigDecimal.class, "amount", customNumberEditor);
 		
+		
+		// register a custom editor for currency 
+		MyCurrencyEditor myCurrencyEditor = new MyCurrencyEditor();
+		webDataBinder.registerCustomEditor(Currency.class, "currency", myCurrencyEditor);
 	}
 }
 
