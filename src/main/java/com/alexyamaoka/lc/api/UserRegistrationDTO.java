@@ -9,6 +9,8 @@ public class UserRegistrationDTO {
 	
 	@NotEmpty(message = "* cannot be empty")	// not empty will not work for just white spaces
 	private String name;
+	
+	
 	private String username;
 	private char[] password;
 	private String  country;

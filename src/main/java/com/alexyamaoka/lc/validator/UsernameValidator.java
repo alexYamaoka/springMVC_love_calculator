@@ -24,6 +24,14 @@ public class UsernameValidator implements Validator {
 		
 		// to check if the field is null
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "username.empty", "Username cannot be empty");
+		
+		
+		// username should have "_" underscore
+		String username = ((UserRegistrationDTO)target).getUsername();
+		
+		if (! username.contains("_")) {
+			errors.rejectValue("username", "username.invalidString", "String must contain an underscore _");
+		}
 	}
 
 }

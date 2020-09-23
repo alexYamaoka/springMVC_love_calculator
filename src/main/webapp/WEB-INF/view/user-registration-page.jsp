@@ -27,6 +27,7 @@
 			
 			<label for="username">Username: </label>
 			<form:input id="username" path="username"/>
+			<form:errors path="username" cssClass="error" />
 			<br/>
 			
 			<label for="password">Password: </label>
