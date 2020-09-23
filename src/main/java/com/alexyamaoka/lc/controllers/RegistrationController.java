@@ -95,6 +95,12 @@ public class RegistrationController {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		webDataBinder.registerCustomEditor(String.class, "name", stringTrimmerEditor);
 		
+		
+		
+		
+		
+		
+		
 	}
 }
 
