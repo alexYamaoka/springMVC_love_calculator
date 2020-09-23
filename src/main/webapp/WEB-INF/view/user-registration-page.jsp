@@ -69,6 +69,8 @@
 			
 			<label for="email">Email</label>
 			<form:input id="email" path="communicationDTO.email"/>
+			<form:errors path="communicationDTO.email" cssClass="error"/>
+			<br/>
 			
 			<label for="phone">Phone</label>
 			<form:input id="phone" path="communicationDTO.phone"/>
