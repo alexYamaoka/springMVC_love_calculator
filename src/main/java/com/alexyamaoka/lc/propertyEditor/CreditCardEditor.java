@@ -9,8 +9,9 @@ public class CreditCardEditor extends PropertyEditorSupport {
 	@Override
 	public String getAsText() {
 		// is similar to the print method in the formatter to display credit card inside webpage when it loads 
+		CreditCard creditCard = (CreditCard)getValue();
 		
-		return "xxxx-xxxx-xxxx-xxxx";
+		return "" + creditCard;
 	}
 
 	@Override

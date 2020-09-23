@@ -41,11 +41,13 @@ public class PaymentController {
 		return "payment-page";
 	}
 	
+	
 	@RequestMapping("/process-payment")
 	public String processPayment(@ModelAttribute("billDTO") BillDTO billDTO) {
 		
 		return "process-payment";
 	}
+	
 	
 	@InitBinder
 	public void initBinder(WebDataBinder webDataBinder) {
