@@ -20,6 +20,12 @@
 				<label for="billingAmount">Amount</label>
 				<form:input id="billingAmount" path="paymentAmount" />
 			</p>
+			<p>
+				<label>Currency</label>
+			</p>
+			<p>
+				<label>Date</label>
+			</p>
 		</div>
 		
 		<div align="center">

@@ -11,8 +11,8 @@ public class CreditCardFormatter implements Formatter<CreditCard>{
 
 	@Override
 	public String print(CreditCard object, Locale locale) {
-		String cardAsString = object.getFirstFourDigits() + " " + object.getSecondFourDigits() + " "
-							+ object.getThirdFourDigits() + " " + object.getFourthFourDigits();
+		String cardAsString = object.getFirstFourDigits() + "-" + object.getSecondFourDigits() + "-"
+							+ object.getThirdFourDigits() + "-" + object.getFourthFourDigits();
 	
 		System.out.println("inside credit card formatter print method");
 		return cardAsString;
