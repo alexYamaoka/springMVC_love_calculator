@@ -57,7 +57,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	}
 	
 	
-	
+
 	// let spring know to use formatter for phone number, etc...
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
@@ -66,7 +66,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		registry.addFormatter(new CreditCardFormatter());
 		registry.addFormatter(new CurrencyFormatter());
 	}
-	
+
 	
 	// tell spring to use our custom validator
 	@Override

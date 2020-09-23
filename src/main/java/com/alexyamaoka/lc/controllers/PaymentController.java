@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alexyamaoka.lc.api.BillDTO;
+import com.alexyamaoka.lc.formatter.CreditCardFormatter;
+import com.alexyamaoka.lc.formatter.CurrencyFormatter;
+import com.alexyamaoka.lc.formatter.PhoneNumberFormatter;
 import com.alexyamaoka.lc.propertyEditor.MyCurrencyEditor;
 
 
@@ -56,6 +59,13 @@ public class PaymentController {
 		// register a custom editor for currency 
 		MyCurrencyEditor myCurrencyEditor = new MyCurrencyEditor();
 		webDataBinder.registerCustomEditor(Currency.class, "currency", myCurrencyEditor);
+		
+		
+		
+		// registering formatter inside initBinder
+		// webDataBinder.addCustomFormatter(new CreditCardFormatter());
+		// webDataBinder.addCustomFormatter(new PhoneNumberFormatter());
+		// webDataBinder.addCustomFormatter(new CurrencyFormatter());
 	}
 }
 
