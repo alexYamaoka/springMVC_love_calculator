@@ -8,6 +8,8 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -22,7 +24,7 @@ public class RegistrationController {
 	public String showRegistrationPage(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
 		System.out.println("inside show registration page method");
 		
-		// load the saved user data from the database
+		// load the saved user data from the database- to show print method is being called for formatter
 		Phone phone = new Phone();
 		phone.setCountryCode("91");
 		phone.setUserNumber("2229995555");
@@ -60,4 +62,29 @@ public class RegistrationController {
 		
 		return "registration-success";
 	}
+	
+	
+
+	@InitBinder
+	public void initBinder(WebDataBinder webDataBinder) {
+		
+		System.out.println("inside the init binder method");
+		// flow of execution
+		// 1) init binder
+		// 2) handler method 
+		
+		// ex: don't want to bind specific data fields such as name
+		webDataBinder.setDisallowedFields("name");
+		
+	}
 }
+
+
+
+
+
+
+
+
+
+
