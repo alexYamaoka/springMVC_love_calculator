@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.alexyamaoka.lc.api.CommunicationDTO;
 import com.alexyamaoka.lc.api.Phone;
 import com.alexyamaoka.lc.api.UserRegistrationDTO;
+import com.alexyamaoka.lc.propertyEditor.NamePropertyEditor;
 
 @Controller
 public class RegistrationController {
@@ -95,7 +96,8 @@ public class RegistrationController {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		webDataBinder.registerCustomEditor(String.class, "name", stringTrimmerEditor);
 		
-		
+		NamePropertyEditor namePropertyEditor = new NamePropertyEditor();
+		webDataBinder.registerCustomEditor(String.class, "name", namePropertyEditor);
 		
 		
 		
