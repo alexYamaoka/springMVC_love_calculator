@@ -7,7 +7,7 @@ import com.alexyamaoka.lc.validator.Age;
 public class UserRegistrationDTO {
 	
 	
-	@NotEmpty(message = "* cannot be empty")	// not empty will not work for just white spaces
+	@NotEmpty(message = "{string.notEmpty}")	// not empty will not work for just white spaces
 	private String name;
 	
 	

@@ -10,7 +10,7 @@ public class UserInfoDTO {
 	// data transfer object 
 	
 	@NotBlank(message = " * Your name cannot be blank")	
-	@Size(min = 3, max = 15, message = " * Your name should have between 3-15 characters")
+	@Size(min = 3, max = 15, message = "{username.size}")
 	private String username;
 	
 	@NotBlank(message = " * Crush name cannot be blank")	
