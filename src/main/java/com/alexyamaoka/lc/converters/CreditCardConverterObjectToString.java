@@ -9,7 +9,7 @@ public class CreditCardConverterObjectToString implements Converter<CreditCard, 
 	@Override
 	public String convert(CreditCard source) {
 		
-		return source.toString();
+		return source.getFirstFourDigits().toString();
 	}
 
 }
