@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Registration</title>
-
 	<style type="text/css">
 			.error{
 				color: red;
@@ -21,8 +20,9 @@
 	
 	<form:form action="registration-success" method="GET" modelAttribute="userRegistrationDTO">
 		<div align="center">
-			<label for="user">User: </label>
-			<form:input id="user" path="name"/>
+			<label for="name">User: </label>
+			<form:input id="name" path="name"/>
+			<form:errors path="name" cssClass="error" />
 			<br/>
 			
 			<label for="username">Username: </label>

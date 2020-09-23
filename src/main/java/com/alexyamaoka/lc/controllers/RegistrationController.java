@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -41,6 +42,7 @@ public class RegistrationController {
 		// spring will capture data from url and bind it to userRegistrationDTO automatically
 		
 		System.out.println("inside process user registration method");
+		System.out.println("Name value entered by the user is: " + "|" + userRegistrationDTO.getName() + "|");
 		
 		if (bindingResult.hasErrors()) {
 			
@@ -55,14 +57,11 @@ public class RegistrationController {
 			return "user-registration-page";
 		}
 		
-		
-		
 		// save the dto object in the database 
 		
 		
 		return "registration-success";
 	}
-	
 	
 
 	@InitBinder
@@ -74,7 +73,12 @@ public class RegistrationController {
 		// 2) handler method 
 		
 		// ex: don't want to bind specific data fields such as name
-		webDataBinder.setDisallowedFields("name");
+		// webDataBinder.setDisallowedFields("name");
+		
+		// ex: Property Editor
+		// to trim white spaces if user enters a bunch of spaces
+		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+		webDataBinder.registerCustomEditor(String.class, "name", stringTrimmerEditor);
 		
 	}
 }

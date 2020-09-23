@@ -1,9 +1,13 @@
 package com.alexyamaoka.lc.api;
 
+import javax.validation.constraints.NotEmpty;
+
 import com.alexyamaoka.lc.validator.Age;
 
 public class UserRegistrationDTO {
 	
+	
+	@NotEmpty(message = "* cannot be empty")	// not empty will not work for just white spaces
 	private String name;
 	private String username;
 	private char[] password;
@@ -14,8 +18,6 @@ public class UserRegistrationDTO {
 	@Age(lower = 20, upper = 80)
 	private Integer age;
 	
-	
-
 	private CommunicationDTO communicationDTO;
 	
 	
