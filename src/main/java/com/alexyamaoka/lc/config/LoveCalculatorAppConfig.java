@@ -16,6 +16,7 @@ import org.springframework.web.servlet.view.InternalResourceView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.alexyamaoka.lc.converters.CreditCardConverter;
+import com.alexyamaoka.lc.converters.CreditCardConverterObjectToString;
 import com.alexyamaoka.lc.formatter.CreditCardFormatter;
 import com.alexyamaoka.lc.formatter.CurrencyFormatter;
 import com.alexyamaoka.lc.formatter.PhoneNumberFormatter;
@@ -64,9 +65,12 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	public void addFormatters(FormatterRegistry registry) {
 		System.out.println("inside add formatters method");
 		registry.addFormatter(new PhoneNumberFormatter());
-		registry.addConverter(new CreditCardConverter());
-		//registry.addFormatter(new CreditCardFormatter());
+		
 		registry.addFormatter(new CurrencyFormatter());
+		
+		registry.addConverter(new CreditCardConverter());
+		registry.addConverter(new CreditCardConverterObjectToString());
+		//registry.addFormatter(new CreditCardFormatter());
 	}
 
 	

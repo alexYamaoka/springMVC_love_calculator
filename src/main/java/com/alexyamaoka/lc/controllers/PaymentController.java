@@ -72,6 +72,9 @@ public class PaymentController {
 		webDataBinder.registerCustomEditor(Currency.class, "currency", myCurrencyEditor);
 		
 		
+		// CreditCardEditor creditCardEditor = new CreditCardEditor();
+		// webDataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
+		
 		
 		// registering formatter inside initBinder
 		// webDataBinder.addCustomFormatter(new CreditCardFormatter());

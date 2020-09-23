@@ -106,8 +106,7 @@ public class RegistrationController {
 		// webDataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
 		
 		
-		
-		
+
 	}
 }
 
