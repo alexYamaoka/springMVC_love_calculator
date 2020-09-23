@@ -8,12 +8,14 @@
 <title>Process Payment</title>
 </head>
 <body>
-	<h1>Processing Payment Page</h1>
-	Credit Card: ${billDTO.creditCard}<br/>
-	Amount: 	 ${billDTO.amount}<br/>
-	Currency: 	 ${billDTO.currency}<br/>
-	Date: 		 ${billDTO.date}<br/>
+	<div align="center">
+		<h1>Processing Payment Page</h1>
+		Credit Card: ${billDTO.creditCard}<br/>
+		Amount: 	 ${billDTO.amount}<br/>
+		Currency: 	 ${billDTO.currency}<br/>
+		Date: 		 ${billDTO.date}<br/>
 	
+	</div>
 	
 	
 </body>
