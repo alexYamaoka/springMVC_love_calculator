@@ -40,12 +40,14 @@ public class EmailController {
 	
 	
 	@RequestMapping("/process-email")
-	public String processEmail(@ModelAttribute("emailDTO") EmailDTO emailDTO, HttpSession httpSession, Model model) {
+	public String processEmail(@ModelAttribute("emailDTO") EmailDTO emailDTO) {
 		
-		String username = (String)httpSession.getAttribute("username");
-		String newUsername = "Mr. " + username.toUpperCase();
 		
-		model.addAttribute("username", newUsername);
+// 		HttpSession httpSession, Model model   // include inside method parameter
+//		String username = (String)httpSession.getAttribute("username");
+//		String newUsername = "Mr. " + username.toUpperCase();
+//		
+//		model.addAttribute("username", newUsername);
 		
 		return "process-email-page";
 	}
