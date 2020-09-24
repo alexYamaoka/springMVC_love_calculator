@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.alexyamaoka.lc.api.UserInfoDTO;
 
 @Controller
-@SessionAttributes("userInfoDTO")	
+@SessionAttributes({"userInfoDTO"})	
 public class LCAppController {
 	
 	
