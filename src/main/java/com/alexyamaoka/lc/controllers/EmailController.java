@@ -31,7 +31,7 @@ public class EmailController {
 		
 		// add cookie spring way 
 		// @CookieValue("lcApp.username") String username		// include inside method parameter
-		model.addAttribute("username", username);
+		// model.addAttribute("username", username);
 		
 		return "send-email-page";
 	}
