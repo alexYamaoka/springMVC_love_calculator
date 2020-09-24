@@ -19,7 +19,7 @@
 		<br/><br/>
 		
 		
-		<a href="/spring-love-calculator/sendEmail/${userInfoDTO.username}">Send results to your Email</a>
+		<a href="/spring-love-calculator/sendEmail">Send results to your Email</a>
 	</div>
 	
 </body>
