@@ -7,6 +7,6 @@
 </head>
 <body>
 	<h2>Hi</h2>
-	<label>Email successfully sent to ${emailDTO.userEmail}!</label>
+	<label>Email successfully sent to ${emailDTO.userEmail} !</label>
 </body>
 </html>

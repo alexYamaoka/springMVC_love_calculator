@@ -21,17 +21,19 @@ import com.alexyamaoka.lc.api.UserInfoDTO;
 public class LCAppController {
 	
 	@RequestMapping("/")
-	public String showHomePage(@ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, HttpServletRequest httpServletRequest) {
+	public String showHomePage(@ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO) {   
 		// read the existing property by fetching it from the dto 
 		
-		Cookie[] cookiesArray = httpServletRequest.getCookies();
 		
-		for (Cookie cookie: cookiesArray) {
-			if (cookie.getName().equals("lcApp.username")) {
-				String myUsername = cookie.getValue();
-				userInfoDTO.setUsername(myUsername);
-			}
-		}
+//		HttpServletRequest httpServletRequest  // inside method parameter
+//		Cookie[] cookiesArray = httpServletRequest.getCookies();
+//		
+//		for (Cookie cookie: cookiesArray) {
+//			if (cookie.getName().equals("lcApp.username")) {
+//				String myUsername = cookie.getValue();
+//				userInfoDTO.setUsername(myUsername);
+//			}
+//		}
 		
 		return "home-page";
 	}
