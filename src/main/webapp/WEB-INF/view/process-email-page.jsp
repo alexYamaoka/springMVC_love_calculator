@@ -6,7 +6,7 @@
 <title>Process Email</title>
 </head>
 <body>
-	<h2>Hi</h2>
+	<h2>Hi ${username} </h2>
 	<label>Email successfully sent to ${emailDTO.userEmail} !</label>
 </body>
 </html>
