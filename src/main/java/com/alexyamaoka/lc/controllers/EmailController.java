@@ -2,6 +2,8 @@ package com.alexyamaoka.lc.controllers;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -38,9 +40,12 @@ public class EmailController {
 	
 	
 	@RequestMapping("/process-email")
-	public String processEmail(@ModelAttribute("emailDTO") EmailDTO emailDTO) {
+	public String processEmail(@ModelAttribute("emailDTO") EmailDTO emailDTO, HttpSession httpSession, Model model) {
 		
+		String username = (String)httpSession.getAttribute("username");
+		String newUsername = "Mr. " + username.toUpperCase();
 		
+		model.addAttribute("username", newUsername);
 		
 		return "process-email-page";
 	}

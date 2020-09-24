@@ -42,7 +42,7 @@ public class LCAppController {
 	
 	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult, HttpServletRequest httpServletRequest) {
+	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult) {
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
 		
@@ -63,9 +63,13 @@ public class LCAppController {
 		
 		
 		// if its a new user, create a new session. if returning user, retrieve cookie
-		HttpSession httpSession = httpServletRequest.getSession();
-		httpSession.setAttribute("username", userInfoDTO.getUsername());
+		// this attribute is available among all jsp or controller pages
+		// by default, the session objects are stored inside the server memory - deleted once the server is stopped
 		
+		// HttpServletRequest httpServletRequest   // include in method parameter
+//		HttpSession httpSession = httpServletRequest.getSession();
+//		httpSession.setAttribute("username", userInfoDTO.getUsername());
+//		httpSession.setMaxInactiveInterval(120);
 		
 		
 		
