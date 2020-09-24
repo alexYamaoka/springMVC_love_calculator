@@ -3,6 +3,7 @@ package com.alexyamaoka.lc.controllers;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
@@ -20,8 +21,17 @@ import com.alexyamaoka.lc.api.UserInfoDTO;
 public class LCAppController {
 	
 	@RequestMapping("/")
-	public String showHomePage(@ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO) {
+	public String showHomePage(@ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, HttpServletRequest httpServletRequest) {
 		// read the existing property by fetching it from the dto 
+		
+		Cookie[] cookiesArray = httpServletRequest.getCookies();
+		
+		for (Cookie cookie: cookiesArray) {
+			if (cookie.getName().equals("lcApp.username")) {
+				String myUsername = cookie.getValue();
+				userInfoDTO.setUsername(myUsername);
+			}
+		}
 		
 		return "home-page";
 	}
