@@ -38,8 +38,10 @@ public class LCAppController {
 		return "home-page";
 	}
 	
+	
+	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult, HttpServletResponse httpServletResponse) {
+	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult) {
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
 		
@@ -57,12 +59,13 @@ public class LCAppController {
 		
 		
 		
-		// create a cookie for the username
-		Cookie cookie = new Cookie("lcApp.username", userInfoDTO.getUsername());
-		cookie.setMaxAge(60*60*24); 			// write the time in minutes
-		
-		// add the cookie to the response
-		httpServletResponse.addCookie(cookie);
+//		// create a cookie for the username
+		// HttpServletResponse httpServletResponse    //   include inside method parameter
+//		Cookie cookie = new Cookie("lcApp.username", userInfoDTO.getUsername());
+//		cookie.setMaxAge(60*60*24); 			// write the time in minutes
+//		
+//		// add the cookie to the response
+//		httpServletResponse.addCookie(cookie);
 		
 		
 		

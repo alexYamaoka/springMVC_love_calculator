@@ -15,7 +15,7 @@ import com.alexyamaoka.lc.api.EmailDTO;
 public class EmailController {
 	
 	@RequestMapping("/sendEmail")			
-	public String sendEmail(@CookieValue("lcApp.username") String username, Model model) {	
+	public String sendEmail(Model model) {	
 		
 		// {} is dynamic. inside it can be anything 
 		// @PathVariable("username") String username
@@ -30,6 +30,7 @@ public class EmailController {
 		//model.addAttribute("username", username.toUpperCase());
 		
 		// add cookie spring way 
+		// @CookieValue("lcApp.username") String username		// include inside method parameter
 		model.addAttribute("username", username);
 		
 		return "send-email-page";
