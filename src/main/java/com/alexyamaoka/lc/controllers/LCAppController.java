@@ -20,12 +20,19 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.alexyamaoka.lc.api.UserInfoDTO;
 
 @Controller
-@SessionAttributes("userInfoDTO")
+@SessionAttributes("userInfoDTO")	
 public class LCAppController {
 	
+	
+	
 	@RequestMapping("/")
-	public String showHomePage(@ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO) {   
+	public String showHomePage(Model model) {   
 		// read the existing property by fetching it from the dto 
+		
+		
+		// whenever spring is going to put userInfoDTO inside the modelAttribute, it is also going to put it in the session
+		// whenever we have @modelAttribute, need to put userInfoDTO manually using model
+		model.addAttribute("userInfoDTO", new UserInfoDTO());
 		
 		
 //		HttpServletRequest httpServletRequest  // inside method parameter
