@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -41,7 +42,7 @@ public class LCAppController {
 	
 	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult) {
+	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult, HttpServletRequest httpServletRequest) {
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
 		
@@ -56,6 +57,16 @@ public class LCAppController {
 			
 			return "home-page";
 		}
+		
+		
+		
+		
+		
+		// if its a new user, create a new session. if returning user, retrieve cookie
+		HttpSession httpSession = httpServletRequest.getSession();
+		httpSession.setAttribute("username", userInfoDTO.getUsername());
+		
+		
 		
 		
 		
