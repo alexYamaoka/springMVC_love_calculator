@@ -50,6 +50,7 @@ public class EmailController {
 // too much work to attach info to URL and retrieve it
 
 // How to send/acess data inside multiple controllers/view?
+// Session and cookies - store inside server memory
 
 
 
