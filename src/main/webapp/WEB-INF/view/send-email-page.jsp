@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<h1>Hi</h1>
+	<h1>Hi ${username}</h1>
 	<h2>Send Results to Your Email</h2>
 
 	<form:form action="process-email" method="GET" modelAttribute="emailDTO">
