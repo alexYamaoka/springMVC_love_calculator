@@ -111,12 +111,20 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		
 		return javaMailSenderImpl;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
