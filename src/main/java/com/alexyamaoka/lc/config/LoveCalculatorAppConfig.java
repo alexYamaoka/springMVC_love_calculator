@@ -111,7 +111,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		javaMailSenderImpl.setHost(environment.getProperty("mail.host"));
 		javaMailSenderImpl.setUsername(environment.getProperty("mail.host"));
 		javaMailSenderImpl.setPassword(environment.getProperty("mail.password"));
-		javaMailSenderImpl.setPort(environment.getProperty("mail.port"));		     // port number has to be 587
+		javaMailSenderImpl.setPort(Integer.parseInt(environment.getProperty("mail.port")));		     // port number has to be 587
 		
 		Properties mailProperties = new Properties();
 		mailProperties.put("mail.smtp.starttls.enable", true);
