@@ -1,6 +1,7 @@
 package com.alexyamaoka.lc.config;
 
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -36,6 +37,9 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	
 	@Autowired
 	private Environment environment;
+	
+	// create a logger instance for this class
+	Logger logger = Logger.getLogger(LoveCalculatorAppConfig.class.getName());
 	
 	
 	
@@ -106,8 +110,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		
 		JavaMailSenderImpl javaMailSenderImpl = new JavaMailSenderImpl();
 		
-	
-		
+		logger.info(">>>>>>>fetching the host value" + environment.getProperty("mail.host"));
 		
 		javaMailSenderImpl.setHost(environment.getProperty("mail.host"));
 		javaMailSenderImpl.setUsername(environment.getProperty("mail.username"));
@@ -117,8 +120,6 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		Properties mailProperties = new Properties();
 		mailProperties.put("mail.smtp.starttls.enable", true);
 		mailProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-		//mailProperties.put("mail.smtp.auth", true);
-		//mailProperties.put("mail.debug", true);
 		
 		javaMailSenderImpl.setJavaMailProperties(mailProperties);
 		
