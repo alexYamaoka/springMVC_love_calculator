@@ -46,12 +46,16 @@ public class EmailController {
 // 		HttpSession httpSession, Model model   // include inside method parameter
 //		String username = (String)httpSession.getAttribute("username");
 //		String newUsername = "Mr. " + username.toUpperCase();
-//		
 //		model.addAttribute("username", newUsername);
+		
+		LCAppEmailService.sendEmail(emailDTO.getUserEmail(), "result is Friend!");
 		
 		
 		return "process-email-page";
 	}
+
+
+	
 	
 }
 
