@@ -15,7 +15,7 @@
 		
 		<h2>The Love Calculator Predicts...</h2>
 		${userInfoDTO.username} and ${userInfoDTO.crushName} are <br/>
-		FRIENDS!
+		${result}!
 		<br/><br/>
 		
 		

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,12 +19,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.alexyamaoka.lc.api.UserInfoDTO;
+import com.alexyamaoka.lc.service.LCAppService;
+import com.alexyamaoka.lc.service.LCAppServiceImpl;
 
 @Controller
 @SessionAttributes({"userInfoDTO"})	
 public class LCAppController {
 	
-	
+	@Autowired
+	private LCAppServiceImpl lcAppServiceImpl;
 	
 	@RequestMapping("/")
 	public String showHomePage(Model model) {   
@@ -51,7 +55,7 @@ public class LCAppController {
 	
 	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult) {
+	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult, Model model) {
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
 		
@@ -66,44 +70,37 @@ public class LCAppController {
 			
 			return "home-page";
 		}
-		
-		
-		
-		
-		
-		// if its a new user, create a new session. if returning user, retrieve cookie
-		// this attribute is available among all jsp or controller pages
-		// by default, the session objects are stored inside the server memory - deleted once the server is stopped
-		
-		// HttpServletRequest httpServletRequest   // include in method parameter
-//		HttpSession httpSession = httpServletRequest.getSession();
-//		httpSession.setAttribute("username", userInfoDTO.getUsername());
-//		httpSession.setMaxInactiveInterval(120);
-		
-		
-		
-		
-//		// create a cookie for the username
-		// HttpServletResponse httpServletResponse    //   include inside method parameter
-//		Cookie cookie = new Cookie("lcApp.username", userInfoDTO.getUsername());
-//		cookie.setMaxAge(60*60*24); 			// write the time in minutes
-//		
-//		// add the cookie to the response
-//		httpServletResponse.addCookie(cookie);
-		
-		
-		
-		
-		
+	
 		// calculate love percentage between two names
-		
-		
+		String result = lcAppServiceImpl.calculateLove(userInfoDTO.getUsername(), userInfoDTO.getCrushName());
+		model.addAttribute("result", result);
 		
 		
 		return "result-page";
 	}	
 }
-	
+
+
+
+// if its a new user, create a new session. if returning user, retrieve cookie
+// this attribute is available among all jsp or controller pages
+// by default, the session objects are stored inside the server memory - deleted once the server is stopped
+
+// HttpServletRequest httpServletRequest   // include in method parameter
+//HttpSession httpSession = httpServletRequest.getSession();
+//httpSession.setAttribute("username", userInfoDTO.getUsername());
+//httpSession.setMaxInactiveInterval(120);
+
+
+
+
+//// create a cookie for the username
+// HttpServletResponse httpServletResponse    //   include inside method parameter
+//Cookie cookie = new Cookie("lcApp.username", userInfoDTO.getUsername());
+//cookie.setMaxAge(60*60*24); 			// write the time in minutes
+//
+//// add the cookie to the response
+//httpServletResponse.addCookie(cookie);
 
 
 

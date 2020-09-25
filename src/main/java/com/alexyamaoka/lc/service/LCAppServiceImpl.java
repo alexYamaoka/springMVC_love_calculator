@@ -16,7 +16,11 @@ public class LCAppServiceImpl implements LCAppService {
 		int charCount = name.length();
 		int formulaCount = LC_APP_FORMULA.length();
 		
-		int index = charCount % formulaCount;
+		int index = charCount % (formulaCount);
+		
+		if (index != 0) {
+			index -= 1;
+		}
 		
 		char result = LC_APP_FORMULA.charAt(index);
 		
