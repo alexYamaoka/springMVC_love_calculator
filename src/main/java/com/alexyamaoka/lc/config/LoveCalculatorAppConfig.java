@@ -2,12 +2,15 @@ package com.alexyamaoka.lc.config;
 
 import java.util.Properties;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -28,7 +31,13 @@ import com.alexyamaoka.lc.formatter.PhoneNumberFormatter;
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = {"com.alexyamaoka.lc"})
+@PropertySource("classpath:email.properties")
 public class LoveCalculatorAppConfig implements WebMvcConfigurer {
+	
+	@Autowired
+	private Environment environment;
+	
+	
 	
 	// set up view resolver
 	@Bean
@@ -97,10 +106,12 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		
 		JavaMailSenderImpl javaMailSenderImpl = new JavaMailSenderImpl();
 		
-		javaMailSenderImpl.setHost("smtp.gmail.com");
-		javaMailSenderImpl.setUsername("sampleEmail@gmail.com");
-		javaMailSenderImpl.setPassword("samplePassword");
-		javaMailSenderImpl.setPort(587);		// port number has to be 587
+		
+		
+		javaMailSenderImpl.setHost(environment.getProperty("mail.host"));
+		javaMailSenderImpl.setUsername(environment.getProperty("mail.host"));
+		javaMailSenderImpl.setPassword(environment.getProperty("mail.password"));
+		javaMailSenderImpl.setPort(environment.getProperty("mail.port"));		     // port number has to be 587
 		
 		Properties mailProperties = new Properties();
 		mailProperties.put("mail.smtp.starttls.enable", true);
