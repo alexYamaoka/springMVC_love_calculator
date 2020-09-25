@@ -1,6 +1,7 @@
 package com.alexyamaoka.lc.controllers;
 
 import java.util.Map;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpSession;
 
@@ -23,6 +24,11 @@ public class EmailController {
 	
 	@Autowired
 	private LCAppEmailServiceImpl lcAppEmailServiceImpl;
+	
+	Logger logger = Logger.getLogger(EmailController.class.getName());
+	
+	
+	
 	
 	@RequestMapping("/sendEmail")			
 	public String sendEmail(Model model) {	
@@ -56,8 +62,16 @@ public class EmailController {
 //		String newUsername = "Mr. " + username.toUpperCase();
 //		model.addAttribute("username", newUsername);
 		
+		try {
+			
+			lcAppEmailServiceImpl.sendEmail(userInfoDTO.getUsername(), emailDTO.getUserEmail(), "Friend!");
+			
+		} 
+		catch (Exception e) {
+			logger.info(">>>>>>>>>>> exception inside send email service method!!");
+		}
 		
-		lcAppEmailServiceImpl.sendEmail(userInfoDTO.getUsername(), emailDTO.getUserEmail(), "Friend!");
+		
 		
 		
 		return "process-email-page";
