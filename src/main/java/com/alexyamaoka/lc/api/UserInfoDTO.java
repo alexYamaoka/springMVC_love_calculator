@@ -21,7 +21,9 @@ public class UserInfoDTO {
 	private boolean agreedToTermsAndCondition;
 	
 	
+	private String result;
 	
+
 	
 
 	public UserInfoDTO() {
@@ -40,6 +42,10 @@ public class UserInfoDTO {
 		return agreedToTermsAndCondition;
 	}
 	
+	public String getResult() {
+		return result;
+	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -50,6 +56,10 @@ public class UserInfoDTO {
 	
 	public void setAgreedToTermsAndCondition(boolean agreedToTermsAndCondition) {
 		this.agreedToTermsAndCondition = agreedToTermsAndCondition;
+	}
+	
+	public void setResult(String result) {
+		this.result = result;
 	}
 	
 	@Override

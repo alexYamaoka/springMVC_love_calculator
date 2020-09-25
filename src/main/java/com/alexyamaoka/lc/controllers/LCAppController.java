@@ -55,9 +55,15 @@ public class LCAppController {
 	
 	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@Valid @ModelAttribute("userInfoDTO") UserInfoDTO userInfoDTO, BindingResult bindingResult, Model model) {
+	public String showResultPage(@Valid  Model model, UserInfoDTO userInfoDTO, BindingResult bindingResult) {		
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
+		
+		// by writing BindingResult right behind UserInfoDTO, spring will automatically bind the results to userInfoDTO
+		
+		model.addAttribute("userInfoDTO", userInfoDTO);
+		
+		
 		
 		System.out.println(userInfoDTO.isAgreedToTermsAndCondition());
 		
@@ -73,7 +79,7 @@ public class LCAppController {
 	
 		// calculate love percentage between two names
 		String result = lcAppServiceImpl.calculateLove(userInfoDTO.getUsername(), userInfoDTO.getCrushName());
-		model.addAttribute("result", result);
+		userInfoDTO.setResult(result);
 		
 		
 		return "result-page";

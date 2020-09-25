@@ -64,7 +64,7 @@ public class EmailController {
 		
 		try {
 			
-			lcAppEmailServiceImpl.sendEmail(userInfoDTO.getUsername(), emailDTO.getUserEmail(), "Friend!");
+			lcAppEmailServiceImpl.sendEmail(userInfoDTO.getUsername(), emailDTO.getUserEmail(), userInfoDTO.getResult());
 			
 		} 
 		catch (Exception e) {
