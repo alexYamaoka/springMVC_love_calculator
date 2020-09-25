@@ -1,5 +1,7 @@
 package com.alexyamaoka.lc.config;
 
+import java.util.Properties;
+
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -87,7 +89,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	
 	
 	
-	// configure java mail sender 
+	// configure java mail sender
 	@Bean 
 	public JavaMailSender configureJavaMailSender() {
 		
@@ -98,7 +100,11 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		javaMailSenderImpl.setPassword("samplePassword");
 		javaMailSenderImpl.setPort(567);
 		
+		Properties mailProperties = new Properties();
+		mailProperties.put("mail.smtp.starttls.enable", true);
+		mailProperties.put("mail.smtp.ssl.trust", true);
 		
+		javaMailSenderImpl.setJavaMailProperties(mailProperties);
 		
 		return javaMailSenderImpl;
 	}
