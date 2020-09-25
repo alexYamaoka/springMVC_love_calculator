@@ -4,17 +4,25 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.alexyamaoka.lc.api.EmailDTO;
+import com.alexyamaoka.lc.api.UserInfoDTO;
+import com.alexyamaoka.lc.service.LCAppEmailService;
+import com.alexyamaoka.lc.service.LCAppEmailServiceImpl;
 
 @Controller
 public class EmailController {
+	
+	@Autowired
+	private LCAppEmailServiceImpl lcAppEmailServiceImpl;
 	
 	@RequestMapping("/sendEmail")			
 	public String sendEmail(Model model) {	
@@ -40,7 +48,7 @@ public class EmailController {
 	
 	
 	@RequestMapping("/process-email")
-	public String processEmail(@ModelAttribute("emailDTO") EmailDTO emailDTO) {
+	public String processEmail(@SessionAttribute("userInfoDTO") UserInfoDTO userInfoDTO, @ModelAttribute("emailDTO") EmailDTO emailDTO) {
 		
 		
 // 		HttpSession httpSession, Model model   // include inside method parameter
@@ -48,7 +56,8 @@ public class EmailController {
 //		String newUsername = "Mr. " + username.toUpperCase();
 //		model.addAttribute("username", newUsername);
 		
-		LCAppEmailService.sendEmail(emailDTO.getUserEmail(), "result is Friend!");
+		
+		lcAppEmailServiceImpl.sendEmail(userInfoDTO.getUsername(), emailDTO.getUserEmail(), "Friend!");
 		
 		
 		return "process-email-page";
