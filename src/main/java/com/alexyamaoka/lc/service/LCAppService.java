@@ -2,6 +2,8 @@ package com.alexyamaoka.lc.service;
 
 public interface LCAppService {
 	
-	void calculateLove(String username, String crushName);
+	String calculateLove(String username, String crushName);
+	
+	String matchResult(char result);
 
 }
