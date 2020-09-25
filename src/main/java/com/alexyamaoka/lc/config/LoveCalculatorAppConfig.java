@@ -91,7 +91,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	
 	// configure java mail sender
 	@Bean 
-	public JavaMailSender configureJavaMailSender() {
+	public JavaMailSender getJavaMailSender() {
 		
 		JavaMailSenderImpl javaMailSenderImpl = new JavaMailSenderImpl();
 		
@@ -102,9 +102,10 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		
 		Properties mailProperties = new Properties();
 		mailProperties.put("mail.smtp.starttls.enable", true);
-		mailProperties.put("mail.smtp.ssl.trust", true);
+		mailProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 		
 		javaMailSenderImpl.setJavaMailProperties(mailProperties);
+		
 		
 		return javaMailSenderImpl;
 	}
