@@ -100,7 +100,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		javaMailSenderImpl.setHost("smtp.gmail.com");
 		javaMailSenderImpl.setUsername("sampleEmail@gmail.com");
 		javaMailSenderImpl.setPassword("samplePassword");
-		javaMailSenderImpl.setPort(567);
+		javaMailSenderImpl.setPort(587);		// port number has to be 587
 		
 		Properties mailProperties = new Properties();
 		mailProperties.put("mail.smtp.starttls.enable", true);
