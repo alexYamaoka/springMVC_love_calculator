@@ -90,6 +90,8 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 	
 	
 	// configure java mail sender
+	// need to turn on less secure app feature inside gmail 
+	// sign into the gmail and google "less secure app" and enable it
 	@Bean 
 	public JavaMailSender getJavaMailSender() {
 		
