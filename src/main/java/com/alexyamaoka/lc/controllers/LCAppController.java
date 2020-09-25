@@ -55,7 +55,7 @@ public class LCAppController {
 	
 	
 	@RequestMapping("/process-homepage")
-	public String showResultPage(@Valid  Model model, UserInfoDTO userInfoDTO, BindingResult bindingResult) {		
+	public String showResultPage(Model model, @Valid UserInfoDTO userInfoDTO, BindingResult bindingResult) {		
 		// Spring binds the data automatically from the url 
 		// writing the value to the properties by fetching from the url
 		
