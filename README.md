@@ -4,6 +4,8 @@ Implements:
 - spring mvc
 - spring core
 - java
+- jdbc
+- MySql
 - jsp
 - jstl
 - html
