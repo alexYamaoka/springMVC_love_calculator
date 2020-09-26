@@ -63,7 +63,7 @@ public class EmailController {
 //		model.addAttribute("username", newUsername);
 		
 		try {
-			
+			// use httpsession instead of sessionAttributes to fix error when cookies are disabled
 			lcAppEmailServiceImpl.sendEmail(userInfoDTO.getUsername(), emailDTO.getUserEmail(), userInfoDTO.getResult());
 			
 		} 
