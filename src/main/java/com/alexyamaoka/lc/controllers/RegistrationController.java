@@ -1,6 +1,7 @@
 package com.alexyamaoka.lc.controllers;
 
 
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -19,6 +20,7 @@ import com.alexyamaoka.lc.api.CommunicationDTO;
 import com.alexyamaoka.lc.api.CreditCard;
 import com.alexyamaoka.lc.api.Phone;
 import com.alexyamaoka.lc.api.UserRegistrationDTO;
+import com.alexyamaoka.lc.database.RegisteredUsersDAO;
 import com.alexyamaoka.lc.propertyEditor.CreditCardEditor;
 import com.alexyamaoka.lc.propertyEditor.NamePropertyEditor;
 import com.alexyamaoka.lc.validator.EmailValidator;
@@ -29,6 +31,9 @@ public class RegistrationController {
 	
 	@Autowired
 	private EmailValidator emailValidator;
+	
+	@Autowired
+	private RegisteredUsersDAO registeredUsersDAO;
 	
 	@RequestMapping("/register")
 	public String showRegistrationPage(@ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO) {
@@ -47,7 +52,7 @@ public class RegistrationController {
 	
 	
 	@RequestMapping("/registration-success")
-	public String processUserRegistration(@Valid @ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO, BindingResult bindingResult) {
+	public String processUserRegistration(@Valid @ModelAttribute("userRegistrationDTO") UserRegistrationDTO userRegistrationDTO, BindingResult bindingResult) throws ClassNotFoundException {
 		// spring will capture data from url and bind it to userRegistrationDTO automatically
 		
 		System.out.println("inside process user registration method");
@@ -71,6 +76,15 @@ public class RegistrationController {
 		}
 		
 		// save the dto object in the database 
+		try {
+			
+			registeredUsersDAO.saveUser(userRegistrationDTO);
+			
+		} 
+		catch (SQLException e) {
+			System.out.println("inside catch block");
+			e.printStackTrace();
+		}
 		
 		
 		return "registration-success";
