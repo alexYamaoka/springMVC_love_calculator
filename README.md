@@ -5,6 +5,9 @@ Implements:
 - spring core
 - java
 - jsp
+- jstl
+- html
+- css
 - maven
 - transition from web.xml file to java based configuration
 - data binding
