@@ -117,26 +117,30 @@ public class RegisteredUsersDAO {
 			int age = resultSet.getInt(6);
 
 			String email = resultSet2.getString(2);
-			String phone = resultSet2.getString(3);
+			String number = resultSet2.getString(3);
 			
 			
+			Phone phone = getPhoneFromString(number);
 			CommunicationDTO communicationDTO = new CommunicationDTO();
 			communicationDTO.setEmail(email);
+			communicationDTO.setPhone(phone);
 			
+			UserRegistrationDTO userRegistrationDTO = new UserRegistrationDTO();
+			userRegistrationDTO.setUsername(username);
+			userRegistrationDTO.setPassword(password);
+			userRegistrationDTO.setCountry(country);
+			userRegistrationDTO.setHobbies(hobbies);
+			userRegistrationDTO.setGender(gender);
+			userRegistrationDTO.setCommunicationDTO(communicationDTO);
 			
-			System.out.println("username: " + username);
-			System.out.println("password: " + password);
-			System.out.println("country: " + country);
-			System.out.println("hobbies: " + hobbies);
-			System.out.println("gender: " + gender);
-			System.out.println("age: " + age);
-			System.out.println("email: " + email);
-			System.out.println("phone: " + phone);
+			usersList.add(userRegistrationDTO));
+			
 		}
 		
 	
 		closeDBConnection();
-	
+		
+		return usersList;
 	}
 	
 	
@@ -181,6 +185,7 @@ public class RegisteredUsersDAO {
 		
 		return hobbyAsString;
 	}
+	
 	
 	public Phone getPhoneFromString(String number) {
 		Phone phone = new Phone();
