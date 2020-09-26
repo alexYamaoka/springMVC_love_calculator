@@ -79,6 +79,16 @@ public class RegisteredUsersDAO {
 		
 		statement.executeQuery(query);
 		
+		
+		String query2 = "INSERT INTO lcAppDb.Communication(username, email, phone) VALUES("
+						+ "\'" + userRegistrationDTO.getUsername() + "\',"
+						+ "\'" + userRegistrationDTO.getCommunicationDTO().getEmail() + "\',"
+						+ "\'" + userRegistrationDTO.getCommunicationDTO().getPhone().toString() + "\')";
+		
+		statement.executeQuery(query2);
+						
+						
+		
 		closeDBConnection();
 	}
 	
@@ -111,6 +121,10 @@ public class RegisteredUsersDAO {
 		}
 		
 		
+		
+		
+		
+		
 		closeDBConnection();
 	
 	}
@@ -124,6 +138,10 @@ public class RegisteredUsersDAO {
 		String query = "DELETE FROM lcAppDb.RegisteredUsers WHERE username = " + name;
 		
 		statement.executeQuery(query);
+		
+		String query2 = "DELETE FROM lcAppDb.Communication WHERE username = " + name;
+		
+		statement.executeQuery(query2);
 		
 		closeDBConnection();
 	}
