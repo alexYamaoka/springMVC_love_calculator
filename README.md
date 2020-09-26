@@ -8,3 +8,4 @@ maven
 user registration
 custom formatter, converter, property editors
 sending results to email
+reading data from properties file
