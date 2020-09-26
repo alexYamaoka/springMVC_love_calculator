@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -15,6 +17,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
+import com.alexyamaoka.lc.api.CommunicationDTO;
+import com.alexyamaoka.lc.api.Phone;
 import com.alexyamaoka.lc.api.UserRegistrationDTO;
 
 @Service
@@ -89,7 +93,10 @@ public class RegisteredUsersDAO {
 	}
 	
 	
-	public void viewAllRegisteredUsers() throws SQLException, ClassNotFoundException {
+	public List<UserRegistrationDTO> viewAllRegisteredUsers() throws SQLException, ClassNotFoundException {
+		
+		List<UserRegistrationDTO> usersList = new ArrayList<UserRegistrationDTO>();
+		
 		connectToDB();
 		
 		Statement statement = connection.createStatement();
@@ -111,6 +118,11 @@ public class RegisteredUsersDAO {
 
 			String email = resultSet2.getString(2);
 			String phone = resultSet2.getString(3);
+			
+			
+			CommunicationDTO communicationDTO = new CommunicationDTO();
+			communicationDTO.setEmail(email);
+			
 			
 			System.out.println("username: " + username);
 			System.out.println("password: " + password);
@@ -169,5 +181,17 @@ public class RegisteredUsersDAO {
 		
 		return hobbyAsString;
 	}
+	
+	public Phone getPhoneFromString(String number) {
+		Phone phone = new Phone();
+		
+		String[] numberList = number.split("-");
+		phone.setCountryCode(numberList[0]);
+		phone.setUserNumber(numberList[1]);
+		
+		return phone;
+	}
+	
+	
 	
 }
