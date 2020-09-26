@@ -1,5 +1,6 @@
 # springMVC_love_calculator
-Spring MVC web application designed to calculate matching between 2 names.  
+Spring MVC web application designed to calculate matching  of FRIEND, LOVE, AFFECTION, MARRIAGE, and ENEMY between 2 names.  
+
 Implements:
 - spring mvc
 - spring core
