@@ -197,7 +197,7 @@ public class RegisteredUsersDAO {
 		return result;
 	}
 	
-	public void connectToDB() throws ClassNotFoundException, SQLException {
+	private void connectToDB() throws ClassNotFoundException, SQLException {
 		this.driver = environment.getProperty("db.driver");
 		this.url = environment.getProperty("db.url");
 		this.username = environment.getProperty("db.username");
@@ -208,12 +208,12 @@ public class RegisteredUsersDAO {
 	}
 	
 	
-	public void closeDBConnection() throws SQLException {
+	private void closeDBConnection() throws SQLException {
 		connection.close();
 	}
 	
 	
-	public String getCSVFormatHobby(String[] list) {
+	private String getCSVFormatHobby(String[] list) {
 		String hobbyAsString = "";
 		for (String s: list) {
 			hobbyAsString = hobbyAsString + s + ", ";
@@ -224,13 +224,13 @@ public class RegisteredUsersDAO {
 		return hobbyAsString;
 	}
 	
-	public String[] parseHobbiesToArray(String hobbies) {
+	private String[] parseHobbiesToArray(String hobbies) {
 		String[] list = hobbies.split(",");
 		
 		return list;
 	}
 	
-	public Phone getPhoneFromString(String number) {
+	private Phone getPhoneFromString(String number) {
 		Phone phone = new Phone();
 		
 		System.out.println("number" + number);
