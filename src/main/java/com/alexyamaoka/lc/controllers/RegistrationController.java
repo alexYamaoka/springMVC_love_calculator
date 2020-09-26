@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.WebDataBinder;
@@ -138,8 +139,10 @@ public class RegistrationController {
 	
 	
 	@RequestMapping("/view-all")
-	public String viewAllRegisteredUsers() {
+	public String viewAllRegisteredUsers(Model model) throws ClassNotFoundException, SQLException {
 		
+		List<UserRegistrationDTO> usersList = registeredUsersDAO.viewAllRegisteredUsers();
+		model.addAttribute("usersList", usersList);
 		
 		return "view-all-users-page";
 	}

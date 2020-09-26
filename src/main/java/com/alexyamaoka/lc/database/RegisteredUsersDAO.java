@@ -101,14 +101,11 @@ public class RegisteredUsersDAO {
 		
 		Statement statement = connection.createStatement();
 		
-		String query = "SELECT * FROM lcAppDb.RegisteredUsers";
-		String query2 = "SELECT * FROM lcAppDb.Communication";
-				
+		String query = "SELECT * FROM lcAppDb.RegisteredUsers AS RU, lcAppDb.Communication AS C WHERE RU.username = C.username";
+		
 		ResultSet resultSet = statement.executeQuery(query);
-		ResultSet resultSet2 = statement.executeQuery(query2);
 		
-		
-		while (resultSet.next() && resultSet2.next()) {
+		while (resultSet.next()) {
 			String username = resultSet.getString(1);
 			String password = resultSet.getString(2);
 			String country = resultSet.getString(3);
@@ -116,9 +113,10 @@ public class RegisteredUsersDAO {
 			String gender = resultSet.getString(5);
 			int age = resultSet.getInt(6);
 
-			String email = resultSet2.getString(2);
-			String number = resultSet2.getString(3);
+			String email = resultSet.getString(7);
+			String number = resultSet.getString(8);
 			
+			String[] hobbyList = parseHobbiesToArray(hobbies);
 			
 			Phone phone = getPhoneFromString(number);
 			CommunicationDTO communicationDTO = new CommunicationDTO();
@@ -127,14 +125,13 @@ public class RegisteredUsersDAO {
 			
 			UserRegistrationDTO userRegistrationDTO = new UserRegistrationDTO();
 			userRegistrationDTO.setUsername(username);
-			userRegistrationDTO.setPassword(password);
+			userRegistrationDTO.setPassword(password.toCharArray());
 			userRegistrationDTO.setCountry(country);
-			userRegistrationDTO.setHobbies(hobbies);
+			userRegistrationDTO.setHobbies(hobbyList);
 			userRegistrationDTO.setGender(gender);
 			userRegistrationDTO.setCommunicationDTO(communicationDTO);
 			
-			usersList.add(userRegistrationDTO));
-			
+			usersList.add(userRegistrationDTO);
 		}
 		
 	
@@ -149,11 +146,10 @@ public class RegisteredUsersDAO {
 		
 		Statement statement = connection.createStatement();
 		
-		String query = "DELETE FROM lcAppDb.RegisteredUsers WHERE username = " + name;
-		String query2 = "DELETE FROM lcAppDb.Communication WHERE username = " + name;
+		String query = "DELETE FROM lcAppDb.RegisteredUsers AS RU, lcAppDb.Communication AS C WHERE RU.username = " 
+						+ "\'" + name + "\'"+ " AND C.username = " + "\'" + name + "\'";
 		
 		statement.executeQuery(query);
-		statement.executeQuery(query2);
 		
 		closeDBConnection();
 	}
@@ -186,6 +182,11 @@ public class RegisteredUsersDAO {
 		return hobbyAsString;
 	}
 	
+	public String[] parseHobbiesToArray(String hobbies) {
+		String[] list = hobbies.split(",");
+		
+		return list;
+	}
 	
 	public Phone getPhoneFromString(String number) {
 		Phone phone = new Phone();
