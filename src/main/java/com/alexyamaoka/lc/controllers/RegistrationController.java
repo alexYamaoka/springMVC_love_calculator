@@ -148,12 +148,7 @@ public class RegistrationController {
 	}
 	
 	
-	@RequestMapping("/delete-user")
-	public String deleteRegisteredUser() {
-		
-		
-		return "delete-user-page";
-	}
+	
 	
 	
 	

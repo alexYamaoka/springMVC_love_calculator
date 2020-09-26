@@ -158,18 +158,25 @@ public class RegisteredUsersDAO {
 	
 	
 	public void deleteUserByName(String name) throws ClassNotFoundException, SQLException {
+		deleteFromRegisteredUsers(name);
+		deleteFromCommunications(name);
+	}
+	
+	public void deleteFromRegisteredUsers(String name) throws ClassNotFoundException, SQLException {
 		connectToDB();
-		
 		Statement statement = connection.createStatement();
-		
-		String query = "DELETE RU, C FROM lcAppDb.RegisteredUsers AS RU, lcAppDb.Communication AS C WHERE RU.username = " 
-						+ "\'" + name + "\'"+ " AND C.username = " + "\'" + name + "\'";
-		
+		String query = "DELETE FROM lcAppDb.RegisteredUsers WHERE username = " + "\'" + name + "\'";
 		statement.executeUpdate(query);
-		
 		closeDBConnection();
 	}
 	
+	public void deleteFromCommunications(String name) throws SQLException, ClassNotFoundException {
+		connectToDB();
+		Statement statement = connection.createStatement();
+		String query = "DELETE FROM lcAppDb.Communications WHERE username = " + "\'" + name + "\'";
+		statement.executeUpdate(query);
+		closeDBConnection();
+	}
 	
 	public void connectToDB() throws ClassNotFoundException, SQLException {
 		this.driver = environment.getProperty("db.driver");
