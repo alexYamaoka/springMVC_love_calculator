@@ -26,7 +26,14 @@
 				<td>${user.username}</td>
 				<td>${user.password}</td>
 				<td>${user.country}</td>
-				<td>${user.hobbies}</td>
+				
+				<td>
+					<c:forEach var="temp" items="${user.hobbies}">
+						${temp}
+					</c:forEach>
+				</td>
+				
+				
 				<td>${user.gender}</td>
 				<td>${user.age}</td>
 				<td>${user.communicationDTO.email}</td>
