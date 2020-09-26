@@ -66,6 +66,11 @@ public class RegisteredUsersDAO {
 	
 	
 	public void saveUser(UserRegistrationDTO userRegistrationDTO) throws SQLException, ClassNotFoundException {
+		saveRegisterdUsers(userRegistrationDTO);
+		saveCommunication(userRegistrationDTO);
+	}
+	
+	public void saveRegisterdUsers(UserRegistrationDTO userRegistrationDTO) throws ClassNotFoundException, SQLException {
 		connectToDB();
 		
 		Statement statement = connection.createStatement();
@@ -80,15 +85,25 @@ public class RegisteredUsersDAO {
 				+ "\'" + userRegistrationDTO.getGender() + "\', " 
 				+ "\'" + userRegistrationDTO.getAge() + "\')";
 		
-		String query2 = "INSERT INTO lcAppDb.Communication(username, email, phone) VALUES("
+		statement.executeUpdate(query);
+		
+		closeDBConnection();
+	}
+	
+	public void saveCommunication(UserRegistrationDTO userRegistrationDTO) throws ClassNotFoundException, SQLException {
+		connectToDB();
+		
+		Statement statement = connection.createStatement();
+		
+		String hobbyAsString = getCSVFormatHobby(userRegistrationDTO.getHobbies());
+		
+		String query = "INSERT INTO lcAppDb.Communication(username, email, phone) VALUES("
 						+ "\'" + userRegistrationDTO.getUsername() + "\',"
 						+ "\'" + userRegistrationDTO.getCommunicationDTO().getEmail() + "\',"
 						+ "\'" + userRegistrationDTO.getCommunicationDTO().getPhone().toString() + "\')";
 		
-		
-		statement.executeQuery(query);
-		statement.executeQuery(query2);
-						
+		statement.executeUpdate(query);
+			
 		closeDBConnection();
 	}
 	
@@ -113,8 +128,8 @@ public class RegisteredUsersDAO {
 			String gender = resultSet.getString(5);
 			int age = resultSet.getInt(6);
 
-			String email = resultSet.getString(7);
-			String number = resultSet.getString(8);
+			String email = resultSet.getString(8);
+			String number = resultSet.getString(9);
 			
 			String[] hobbyList = parseHobbiesToArray(hobbies);
 			
@@ -129,6 +144,7 @@ public class RegisteredUsersDAO {
 			userRegistrationDTO.setCountry(country);
 			userRegistrationDTO.setHobbies(hobbyList);
 			userRegistrationDTO.setGender(gender);
+			userRegistrationDTO.setAge(age);
 			userRegistrationDTO.setCommunicationDTO(communicationDTO);
 			
 			usersList.add(userRegistrationDTO);
@@ -146,10 +162,10 @@ public class RegisteredUsersDAO {
 		
 		Statement statement = connection.createStatement();
 		
-		String query = "DELETE FROM lcAppDb.RegisteredUsers AS RU, lcAppDb.Communication AS C WHERE RU.username = " 
+		String query = "DELETE RU, C FROM lcAppDb.RegisteredUsers AS RU, lcAppDb.Communication AS C WHERE RU.username = " 
 						+ "\'" + name + "\'"+ " AND C.username = " + "\'" + name + "\'";
 		
-		statement.executeQuery(query);
+		statement.executeUpdate(query);
 		
 		closeDBConnection();
 	}
@@ -190,6 +206,8 @@ public class RegisteredUsersDAO {
 	
 	public Phone getPhoneFromString(String number) {
 		Phone phone = new Phone();
+		
+		System.out.println("number" + number);
 		
 		String[] numberList = number.split("-");
 		phone.setCountryCode(numberList[0]);
