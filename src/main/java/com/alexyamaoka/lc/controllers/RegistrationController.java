@@ -133,10 +133,31 @@ public class RegistrationController {
 		
 		// EmailValidator emailValidator = new EmailValidator();
 		// webDataBinder.addValidators(emailValidator);
-		
-		
 
 	}
+	
+	
+	@RequestMapping("/view-all")
+	public String viewAllRegisteredUsers() {
+		
+		
+		return "view-all-users-page";
+	}
+	
+	
+	@RequestMapping("/delete-user")
+	public String deleteRegisteredUser() {
+		
+		
+		return "delete-user-page";
+	}
+	
+	
+	
+	
+	
+	
+	
 }
 
 
