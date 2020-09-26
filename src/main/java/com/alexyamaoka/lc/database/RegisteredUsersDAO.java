@@ -3,6 +3,7 @@ package com.alexyamaoka.lc.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -49,13 +50,13 @@ public class RegisteredUsersDAO {
 	
 	@PostConstruct
 	public void init() throws ClassNotFoundException, SQLException {
-		
+		System.out.println("inside init of RegisterUsersDAO");
 	}
 	
-	
+	@PreDestroy
 	public void destroy() throws SQLException {
 		
-		
+		System.out.println("inside destroy of RegisterUsersDAO");
 		
 	}
 	
@@ -76,7 +77,53 @@ public class RegisteredUsersDAO {
 				+ "\'" + userRegistrationDTO.getGender() + "\', " 
 				+ "\'" + userRegistrationDTO.getAge() + "\')";
 		
-		statement.execute(query);
+		statement.executeQuery(query);
+		
+		closeDBConnection();
+	}
+	
+	
+	public void viewAllRegisteredUsers() throws SQLException, ClassNotFoundException {
+		
+		connectToDB();
+		
+		Statement statement = connection.createStatement();
+		
+		String query = "SELECT * FROM lcAppDb.RegisteredUsers";
+				
+		ResultSet resultSet = statement.executeQuery(query);
+		
+		
+		while (resultSet.next()) {
+			String username = resultSet.getString(1);
+			String password = resultSet.getString(2);
+			String country = resultSet.getString(3);
+			String hobbies = resultSet.getString(4);
+			String gender = resultSet.getString(5);
+			int age = resultSet.getInt(6);
+			
+			System.out.println("username: " + username);
+			System.out.println("password: " + password);
+			System.out.println("country: " + country);
+			System.out.println("hobbies: " + hobbies);
+			System.out.println("gender: " + gender);
+			System.out.println("age: " + age);
+		}
+		
+		
+		closeDBConnection();
+	
+	}
+	
+	
+	public void deleteUserByName(String name) throws ClassNotFoundException, SQLException {
+		connectToDB();
+		
+		Statement statement = connection.createStatement();
+		
+		String query = "DELETE FROM lcAppDb.RegisteredUsers WHERE username = " + name;
+		
+		statement.executeQuery(query);
 		
 		closeDBConnection();
 	}
@@ -92,9 +139,11 @@ public class RegisteredUsersDAO {
 		connection = DriverManager.getConnection(url, username, password);
 	}
 	
+	
 	public void closeDBConnection() throws SQLException {
 		connection.close();
 	}
+	
 	
 	public String getCSVFormatHobby(String[] list) {
 		String hobbyAsString = "";

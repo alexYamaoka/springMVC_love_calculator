@@ -94,7 +94,7 @@ public class RegistrationController {
 	@InitBinder
 	public void initBinder(WebDataBinder webDataBinder) {
 		
-		System.out.println("inside the init binder method");
+		System.out.println("inside the init binder method og Registration Controller");
 		// flow of execution
 		// 1) init binder
 		// 2) handler method 
