@@ -33,12 +33,12 @@ public class DeleteUserController {
 		
 		
 		try {
-			registeredUsersDAO.deleteUserByName(username);
+			String result = registeredUsersDAO.deleteUserByName(username);
+			model.addAttribute("result", result);
 		} catch (ClassNotFoundException | SQLException e) {
 			System.out.println("username not found");
 			e.printStackTrace();
 		}
-		model.addAttribute("username", username);
 		
 		
 		return "delete-user-success";

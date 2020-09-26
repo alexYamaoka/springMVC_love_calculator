@@ -157,25 +157,44 @@ public class RegisteredUsersDAO {
 	}
 	
 	
-	public void deleteUserByName(String name) throws ClassNotFoundException, SQLException {
-		deleteFromRegisteredUsers(name);
-		deleteFromCommunications(name);
+	public String deleteUserByName(String name) throws ClassNotFoundException, SQLException {
+		int result1 = deleteFromRegisteredUsers(name);
+		int result2 = deleteFromCommunications(name);
+		
+		if (result1 == 0 && result2 == 0) {
+			return "User: " + name + " Not Found In Database";
+		}
+		
+		return "Successfully Delted User: " + name;
 	}
 	
-	public void deleteFromRegisteredUsers(String name) throws ClassNotFoundException, SQLException {
+	public int deleteFromRegisteredUsers(String name) throws ClassNotFoundException, SQLException {
 		connectToDB();
 		Statement statement = connection.createStatement();
 		String query = "DELETE FROM lcAppDb.RegisteredUsers WHERE username = " + "\'" + name + "\'";
-		statement.executeUpdate(query);
+		int result = statement.executeUpdate(query);
+		
+		if (result == 0) {
+			System.out.println("User Not Found");
+		}
+		
 		closeDBConnection();
+		
+		return result;
 	}
 	
-	public void deleteFromCommunications(String name) throws SQLException, ClassNotFoundException {
+	public int deleteFromCommunications(String name) throws SQLException, ClassNotFoundException {
 		connectToDB();
 		Statement statement = connection.createStatement();
-		String query = "DELETE FROM lcAppDb.Communications WHERE username = " + "\'" + name + "\'";
-		statement.executeUpdate(query);
+		String query = "DELETE FROM lcAppDb.Communication WHERE username = " + "\'" + name + "\'";
+		int result = statement.executeUpdate(query);
+		
+		if (result == 0) {
+			System.out.println("User Not Found");
+		}
 		closeDBConnection();
+		
+		return result;
 	}
 	
 	public void connectToDB() throws ClassNotFoundException, SQLException {

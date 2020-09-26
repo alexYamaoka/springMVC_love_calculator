@@ -7,8 +7,11 @@
 <title>Deleted User</title>
 </head>
 <body>
-	Successfully Delete User: ${username}
+	<div align="center">
+		<h2>${result}</h2>
 	
 	<a href="/spring-love-calculator/view-all">View All Registered Users</a>
+	</div>
+	
 </body>
 </html>
