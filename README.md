@@ -6,6 +6,7 @@ java
 jsp
 maven
 user registration
-custom formatter, converter, property editors
+custom formatter + converter + property editors
 sending results to email
 reading data from properties file
+Cookies and Sessions
