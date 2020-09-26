@@ -62,7 +62,6 @@ public class RegisteredUsersDAO {
 	
 	
 	public void saveUser(UserRegistrationDTO userRegistrationDTO) throws SQLException, ClassNotFoundException {
-		
 		connectToDB();
 		
 		Statement statement = connection.createStatement();
@@ -77,40 +76,41 @@ public class RegisteredUsersDAO {
 				+ "\'" + userRegistrationDTO.getGender() + "\', " 
 				+ "\'" + userRegistrationDTO.getAge() + "\')";
 		
-		statement.executeQuery(query);
-		
-		
 		String query2 = "INSERT INTO lcAppDb.Communication(username, email, phone) VALUES("
 						+ "\'" + userRegistrationDTO.getUsername() + "\',"
 						+ "\'" + userRegistrationDTO.getCommunicationDTO().getEmail() + "\',"
 						+ "\'" + userRegistrationDTO.getCommunicationDTO().getPhone().toString() + "\')";
 		
+		
+		statement.executeQuery(query);
 		statement.executeQuery(query2);
 						
-						
-		
 		closeDBConnection();
 	}
 	
 	
 	public void viewAllRegisteredUsers() throws SQLException, ClassNotFoundException {
-		
 		connectToDB();
 		
 		Statement statement = connection.createStatement();
 		
 		String query = "SELECT * FROM lcAppDb.RegisteredUsers";
+		String query2 = "SELECT * FROM lcAppDb.Communication";
 				
 		ResultSet resultSet = statement.executeQuery(query);
+		ResultSet resultSet2 = statement.executeQuery(query2);
 		
 		
-		while (resultSet.next()) {
+		while (resultSet.next() && resultSet2.next()) {
 			String username = resultSet.getString(1);
 			String password = resultSet.getString(2);
 			String country = resultSet.getString(3);
 			String hobbies = resultSet.getString(4);
 			String gender = resultSet.getString(5);
 			int age = resultSet.getInt(6);
+
+			String email = resultSet2.getString(2);
+			String phone = resultSet2.getString(3);
 			
 			System.out.println("username: " + username);
 			System.out.println("password: " + password);
@@ -118,13 +118,11 @@ public class RegisteredUsersDAO {
 			System.out.println("hobbies: " + hobbies);
 			System.out.println("gender: " + gender);
 			System.out.println("age: " + age);
+			System.out.println("email: " + email);
+			System.out.println("phone: " + phone);
 		}
 		
-		
-		
-		
-		
-		
+	
 		closeDBConnection();
 	
 	}
@@ -136,11 +134,9 @@ public class RegisteredUsersDAO {
 		Statement statement = connection.createStatement();
 		
 		String query = "DELETE FROM lcAppDb.RegisteredUsers WHERE username = " + name;
-		
-		statement.executeQuery(query);
-		
 		String query2 = "DELETE FROM lcAppDb.Communication WHERE username = " + name;
 		
+		statement.executeQuery(query);
 		statement.executeQuery(query2);
 		
 		closeDBConnection();
