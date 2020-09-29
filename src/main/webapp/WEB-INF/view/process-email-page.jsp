@@ -8,7 +8,8 @@
 	<link type="text/css" href="<c:url value='/assets/css/style.css'/>" rel="stylesheet" />
 </head>
 <body>
-	<div class="outline>
+	<h1 align="center">Results Sent!</h1>
+	<div class="outline">
 		<h2>Hi ${userInfoDTO.username} </h2>
 		<label>Email successfully sent to ${emailDTO.userEmail} !</label>
 	</div>
