@@ -8,7 +8,7 @@
 	<link type="text/css" href="<c:url value='/assets/css/style.css'/>" rel="stylesheet" />
 </head>
 <body>
-	<h1>Admin</h1>
+	<h1 align="center">Admin</h1>
 	
 	<div class="outline" align="center">
 		<a href="/spring-love-calculator/view-all">View All Registered Users</a>
