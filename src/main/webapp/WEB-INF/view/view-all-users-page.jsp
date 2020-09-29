@@ -46,6 +46,16 @@
 		</c:forEach>
 	</table>
 	
+	<br/><br/>
+	<div align="center">
+		<a href="/spring-love-calculator/">Calculate Love</a>
+		<br/>
+		<a href="/spring-love-calculator/delete-user">Delete User</a>
+	</div>
+	
+	
+	
+	
 	</div>
 	
 </body>
