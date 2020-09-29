@@ -27,3 +27,4 @@ Implements:
 
 
 ![Register User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/register.gif)
+![Register User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/view-all.gif)
