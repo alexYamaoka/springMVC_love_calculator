@@ -21,16 +21,16 @@
 			<label for="name">User: </label>
 			<form:input id="name" path="name"/>
 			<form:errors path="name" cssClass="error" />
-			<br/>
+			<br/><br/>
 			
 			<label for="username">Username: </label>
 			<form:input id="username" path="username"/>
 			<form:errors path="username" cssClass="error" />
-			<br/>
+			<br/><br/>
 			
 			<label for="password">Password: </label>
 			<form:password id="passwprd" path="password"/>
-			<br/>
+			<br/><br/>
 			
 			<label for="country">Country Name: </label>
 			<form:select id="country" path="country">
@@ -42,36 +42,36 @@
 				<form:option value="Germany" label="Germany"></form:option>
 				<form:option value="France" label="France"></form:option>
 			</form:select>
-			<br/>
+			<br/><br/>
 			
-			<label>Hobbies: </label>
+			<label>Hobbies: &nbsp &nbsp</label>
 			Baseball<form:checkbox path="hobbies" value="baseball"/>
 			Soccer<form:checkbox path="hobbies" value="soccer"/>
 			Surfing<form:checkbox path="hobbies" value="surfing"/>
 			Camping<form:checkbox path="hobbies" value="camping"/>
 			Travel<form:checkbox path="hobbies" value="travel"/>
-			<br/>
+			<br/><br/>
 			
 			<label>Gender: </label>
 			Male<form:radiobutton path="gender" value="male"/>
 			Female<form:radiobutton path="gender" value="female"/>
-			<br/>
+			<br/><br/>
 			
 			<label for="age">Age: </label>
 			<form:input id="age" path="age"/>
 			<form:errors path="age" cssClass="error"/>
+			<br/><br/>
 		</div>
 		
 		<div align="center">
-			<h2>Communication:</h2>
-			
 			<label for="email">Email</label>
 			<form:input id="email" path="communicationDTO.email"/>
 			<form:errors path="communicationDTO.email" cssClass="error"/>
-			<br/>
+			<br/><br/>
 			
 			<label for="phone">Phone</label>
 			<form:input id="phone" path="communicationDTO.phone"/>
+			<br/><br/>
 		</div>
 		
 		<div align="center">

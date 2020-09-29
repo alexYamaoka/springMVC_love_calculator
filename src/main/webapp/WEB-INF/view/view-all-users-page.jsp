@@ -14,14 +14,14 @@
 	<div class="outline">
 		<table class="table">   <!--  border="1" cellpadding="30%" align="center"-->
 		<tr>
-			<th>username</th>
-			<th>password</th>
-			<th>country</th>
-			<th>hobbies</th>
-			<th>gender</th>
-			<th>age</th>
-			<th>email</th>
-			<th>phone</th>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Country</th>
+			<th>Hobbies</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>Email</th>
+			<th>Phone</th>
 			
 			
 		</tr>
@@ -49,7 +49,9 @@
 	<br/><br/>
 	<div align="center">
 		<a href="/spring-love-calculator/">Calculate Love</a>
-		<br/>
+		&nbsp &nbsp
+		<a href="/spring-love-calculator/register">Register User</a>
+		&nbsp &nbsp
 		<a href="/spring-love-calculator/delete-user">Delete User</a>
 	</div>
 	

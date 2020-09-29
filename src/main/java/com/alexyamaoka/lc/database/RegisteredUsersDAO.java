@@ -130,6 +130,7 @@ public class RegisteredUsersDAO {
 
 			String email = resultSet.getString(8);
 			String number = resultSet.getString(9);
+		
 			
 			String[] hobbyList = parseHobbiesToArray(hobbies);
 			

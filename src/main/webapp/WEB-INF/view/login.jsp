@@ -30,11 +30,11 @@
 				</div>
 				
 				<div align="center">
-			<input type="submit" value="login">
-		</div>
+					<input type="submit" value="login">
+				</div>
 		
 
-	</form>
+			</form>
 		
 		</div>
 		
