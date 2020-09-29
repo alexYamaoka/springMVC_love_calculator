@@ -15,11 +15,11 @@
 		
 		<h2>The Love Calculator Predicts...</h2>
 		${userInfoDTO.username} and ${userInfoDTO.crushName} are <br/>
-		FRIENDS!
+		${userInfoDTO.result}!
 		<br/><br/>
 		
 		
-		<a href="#">Send results to your Email</a>
+		<a href="/spring-love-calculator/sendEmail">Send results to your Email</a>
 	</div>
 	
 </body>

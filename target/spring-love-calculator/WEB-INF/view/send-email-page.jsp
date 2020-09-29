@@ -7,10 +7,16 @@
 <title>Send Email</title>
 </head>
 <body>
-	<form:form>
+
+	<h1>Hi ${userInfoDTO.username} </h1>
+	<h2>Send Results to Your Email</h2>
+
+	<form:form action="process-email" method="GET" modelAttribute="emailDTO">
 		<label for="email">Enter your Email</label>
 		<form:input id="email" path="userEmail"/>
-	
+		
+		<input type="submit" value="send" />
 	</form:form>
 </body>
 </html>
+
