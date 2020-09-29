@@ -23,3 +23,7 @@ Implements:
 - Client side and server side validation
 - User registration
 - Payment page
+
+
+
+![Register User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/register.gif)
