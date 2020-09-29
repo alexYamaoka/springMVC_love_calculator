@@ -12,6 +12,10 @@
 	<h1 align="center">Please Register Here</h1>
 	
 	<div class="outline">
+		<p align="left">
+			<a href="/spring-love-calculator/login">Already have an account? Login</a>
+		</p>
+			
 		<form:form action="registration-success" method="GET" modelAttribute="userRegistrationDTO">
 		<div align="center">
 			<label for="name">User: </label>

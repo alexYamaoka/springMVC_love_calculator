@@ -6,14 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Process Payment</title>
+	<link type="text/css" href="<c:url value='/assets/css/style.css'/>" rel="stylesheet" />
 </head>
 <body>
-	<div align="center">
-		<h1>Processing Payment Page</h1>
-		Credit Card: ${billDTO.creditCard}<br/>
-		Amount: 	 ${billDTO.currency.symbol} ${billDTO.amount}<br/>
-		Currency: 	 ${billDTO.currency.displayName}<br/>
-		Date: 		 ${billDTO.date}<br/>
+	<h1 align="center">Processing Payment</h1>
+	<div class="outline" align="center">
+		Credit Card: ${billDTO.creditCard}<br/><br/>
+		Amount: 	 ${billDTO.currency.symbol} ${billDTO.amount}<br/><br/>
+		Currency: 	 ${billDTO.currency.displayName}<br/><br/>
+		Date: 		 ${billDTO.date}<br/><br/>
 	
 	</div>
 </body>
