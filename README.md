@@ -25,7 +25,7 @@ Implements:
 - Payment page
 
 
-![Calculate Love](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/calculate.gif)
+![Calculate Love](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/calculateAndSend.gif)
 ![Register User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/register.gif)
 ![View all User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/view-all.gif)
-![Delete User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/delete.gif)
+![Delete User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/deleteUser.gif)
