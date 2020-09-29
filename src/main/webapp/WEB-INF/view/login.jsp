@@ -24,7 +24,7 @@
 					<br/><br/>
 					
 					<label for="password">Password: </label>
-					<input id="password" name="password"/>
+					<input type="password" id="password" name="password"/>
 					<br/><br/>
 					
 				</div>
@@ -32,13 +32,9 @@
 				<div align="center">
 					<input type="submit" value="login">
 				</div>
-		
 
 			</form>
-		
 		</div>
-		
-		
 	</div>
 	
 	

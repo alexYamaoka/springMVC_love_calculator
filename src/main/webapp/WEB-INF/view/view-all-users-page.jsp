@@ -48,8 +48,6 @@
 	
 	<br/><br/>
 	<div align="center">
-		<a href="/spring-love-calculator/">Calculate Love</a>
-		&nbsp &nbsp
 		<a href="/spring-love-calculator/register">Register User</a>
 		&nbsp &nbsp
 		<a href="/spring-love-calculator/delete-user">Delete User</a>
