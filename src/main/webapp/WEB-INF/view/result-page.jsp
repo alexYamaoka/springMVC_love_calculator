@@ -20,6 +20,9 @@
 		
 		
 		<a href="/spring-love-calculator/sendEmail">Send results to your Email</a>
+		<br/><br/>
+		<a href="/spring-love-calculator/">Calculate Another Match</a>
+		
 	</div>
 	
 </body>

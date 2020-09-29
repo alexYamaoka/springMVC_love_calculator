@@ -24,5 +24,8 @@
 	Email: 		${userRegistrationDTO.communicationDTO.email} <br/>
 	Phone: 		${userRegistrationDTO.communicationDTO.phone}<br/>
 	
+	<br/><br/>
+	<a href="/spring-love-calculator/"> <p align="center">Calculate Love</p></a>
+	
 </body>
 </html>
