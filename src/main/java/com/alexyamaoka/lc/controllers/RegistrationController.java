@@ -42,7 +42,7 @@ public class RegistrationController {
 		
 		// load the saved user data from the database- to show print method is being called for formatter
 		Phone phone = new Phone();
-		phone.setCountryCode("91");
+		phone.setCountryCode("1");
 		phone.setUserNumber("2229995555");
 		CommunicationDTO communicationDTO = new CommunicationDTO();
 		communicationDTO.setPhone(phone);

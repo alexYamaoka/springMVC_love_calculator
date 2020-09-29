@@ -12,6 +12,8 @@
 	<div class="outline">
 		<h2>Hi ${userInfoDTO.username} </h2>
 		<label>Email successfully sent to ${emailDTO.userEmail} !</label>
+		<br/><br/>
+		<a href="/spring-love-calculator/">Calculate Another Match</a>
 	</div>
 	
 </body>
