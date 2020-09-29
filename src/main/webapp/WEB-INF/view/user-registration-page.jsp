@@ -1,24 +1,18 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Registration</title>
-	<style type="text/css">
-			.error{
-				color: red;
-				position: fixed;
-				text-align: left;
-				margin-left: 30px;
-			}
-	</style>
+	<link type="text/css" href="<c:url value='/assets/css/style.css'/>" rel="stylesheet" />
 </head>
 <body>
 	<h1 align="center">Please Register Here</h1>
 	
-	
-	<form:form action="registration-success" method="GET" modelAttribute="userRegistrationDTO">
+	<div class="outline">
+		<form:form action="registration-success" method="GET" modelAttribute="userRegistrationDTO">
 		<div align="center">
 			<label for="name">User: </label>
 			<form:input id="name" path="name"/>
@@ -82,6 +76,9 @@
 		
 
 	</form:form>
+	
+	</div>
+	
 	 
 	
 	

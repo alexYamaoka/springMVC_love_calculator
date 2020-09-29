@@ -1,14 +1,19 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Delete User</title>
+	<link type="text/css" href="<c:url value='/assets/css/style.css'/>" rel="stylesheet" />
 </head>
 <body>
-	<form action="process-delete-user" method="GET" >
+	<h2 align="center">Delete User</h2>
+	
+	<div class="outline">
+		<form action="process-delete-user" method="GET">
 		<div align="center">
+			
 			<label for="username">Username: </label>
 			<input id="username" name="username"/>
 			
@@ -20,6 +25,8 @@
 		
 
 	</form>
+	</div>
+	
 	 
 	
 </body>

@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>view all users</title>
+
+	<link type="text/css" href="<c:url value='/assets/css/style.css'/>" rel="stylesheet" />
 </head>
 <body>
 	<h1 align="center">Registered Users</h1>
-	<table border="1" cellpadding="30%" align="center">
+	
+	<div class="outline">
+		<table class="table">   <!--  border="1" cellpadding="30%" align="center"-->
 		<tr>
 			<th>username</th>
 			<th>password</th>
@@ -41,5 +45,8 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	</div>
+	
 </body>
 </html>
