@@ -24,7 +24,7 @@ Implements:
 - User registration
 - Payment page
 
-## Calculate Love
+## Login, Calculate, and Send to Email 
 ![Calculate Love](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/calculateAndSend.gif)
 
 ## Results Sent to Email
