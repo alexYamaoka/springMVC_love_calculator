@@ -37,6 +37,6 @@ Implements:
 ## Admin Delete User
 ![Delete User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/deleteUser.gif)
 
-## Billing
+## Payment
 ![Payment Page](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/payment.gif)
 
