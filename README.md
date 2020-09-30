@@ -7,11 +7,10 @@ Implements:
 - Tomcat Server
 - Java
 - Jdbc
-- MySql
-- Jsp
-- Jstl
-- Html
-- Css
+- MySQL
+- JSP
+- HTML
+- CSS
 - Maven
 - Transition from web.xml file to java based configuration
 - Data binding
