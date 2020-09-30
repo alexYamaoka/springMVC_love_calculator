@@ -26,6 +26,9 @@ Implements:
 
 
 ![Calculate Love](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/calculateAndSend.gif)
+![Email Result](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/Screen Shot 2020-09-29 at 4.55.45 PM.png)
 ![Register User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/register.gif)
 ![View all User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/viewAll.gif)
 ![Delete User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/deleteUser.gif)
+![Payment Page](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/payment.gif)
+
