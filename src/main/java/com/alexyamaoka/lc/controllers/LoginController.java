@@ -2,6 +2,7 @@ package com.alexyamaoka.lc.controllers;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,8 @@ public class LoginController {
 	RegisteredUsersDAO registeredUsersDao;
 	
 	
-	private List<UserRegistrationDTO> usersList;
+	//private List<UserRegistrationDTO> usersList;
+	private Map<String, UserRegistrationDTO> usersMap;
 	
 	
 	
@@ -45,15 +47,25 @@ public class LoginController {
 				return "admin";
 			}
 			
-			for (UserRegistrationDTO user: usersList) {
+			
+			if (usersMap.containsKey(username)) {
 				
-				
-				if (user.getUsername().equals(username) && new String(user.getPassword()).equals(password)) {
-					
+				UserRegistrationDTO user = usersMap.get(username);
+				if (new String(user.getPassword()).equals(password)) {
 					model.addAttribute("userInfoDTO", new UserInfoDTO());
 					return "home-page";
 				}
+				
 			}
+//			for (UserRegistrationDTO user: usersMap) {
+//				
+//				
+//				if (user.getUsername().equals(username) && new String(user.getPassword()).equals(password)) {
+//					
+//					model.addAttribute("userInfoDTO", new UserInfoDTO());
+//					return "home-page";
+//				}
+//			}
 			
 			
 		} 
@@ -70,7 +82,7 @@ public class LoginController {
 	
 	private void getUsersFromDB() throws ClassNotFoundException, SQLException {
 		
-		 usersList = registeredUsersDao.viewAllRegisteredUsers();
+		 usersMap = registeredUsersDao.viewAllRegisteredUsers();
 
 	}
 }

@@ -25,23 +25,23 @@
 			
 			
 		</tr>
-		<c:forEach var="user" items="${usersList}">
+		<c:forEach var="user" items="${usersMap}">
 			<tr>
-				<td>${user.username}</td>
-				<td>${user.password}</td>
-				<td>${user.country}</td>
+				<td>${user.value.username}</td>
+				<td>${user.value.password}</td>
+				<td>${user.value.country}</td>
 				
 				<td>
-					<c:forEach var="temp" items="${user.hobbies}">
+					<c:forEach var="temp" items="${user.value.hobbies}">
 						${temp}
 					</c:forEach>
 				</td>
 				
 				
-				<td>${user.gender}</td>
-				<td>${user.age}</td>
-				<td>${user.communicationDTO.email}</td>
-				<td>${user.communicationDTO.phone}</td>
+				<td>${user.value.gender}</td>
+				<td>${user.value.age}</td>
+				<td>${user.value.communicationDTO.email}</td>
+				<td>${user.value.communicationDTO.phone}</td>
 			</tr>
 		</c:forEach>
 	</table>

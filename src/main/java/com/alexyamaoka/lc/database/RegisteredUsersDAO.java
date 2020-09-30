@@ -7,7 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -108,9 +110,9 @@ public class RegisteredUsersDAO {
 	}
 	
 	
-	public List<UserRegistrationDTO> viewAllRegisteredUsers() throws SQLException, ClassNotFoundException {
+	public Map<String, UserRegistrationDTO> viewAllRegisteredUsers() throws SQLException, ClassNotFoundException {
 		
-		List<UserRegistrationDTO> usersList = new ArrayList<UserRegistrationDTO>();
+		Map<String, UserRegistrationDTO> usersMap = new HashMap<String, UserRegistrationDTO>();
 		
 		connectToDB();
 		
@@ -148,13 +150,13 @@ public class RegisteredUsersDAO {
 			userRegistrationDTO.setAge(age);
 			userRegistrationDTO.setCommunicationDTO(communicationDTO);
 			
-			usersList.add(userRegistrationDTO);
+			usersMap.put(username, userRegistrationDTO);
 		}
 		
 	
 		closeDBConnection();
 		
-		return usersList;
+		return usersMap;
 	}
 	
 	

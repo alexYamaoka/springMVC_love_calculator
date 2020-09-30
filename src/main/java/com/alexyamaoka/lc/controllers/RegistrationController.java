@@ -3,6 +3,7 @@ package com.alexyamaoka.lc.controllers;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -141,8 +142,8 @@ public class RegistrationController {
 	@RequestMapping("/view-all")
 	public String viewAllRegisteredUsers(Model model) throws ClassNotFoundException, SQLException {
 		
-		List<UserRegistrationDTO> usersList = registeredUsersDAO.viewAllRegisteredUsers();
-		model.addAttribute("usersList", usersList);
+		Map<String, UserRegistrationDTO> usersMap = registeredUsersDAO.viewAllRegisteredUsers();
+		model.addAttribute("usersMap", usersMap);
 		
 		return "view-all-users-page";
 	}
