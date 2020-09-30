@@ -24,11 +24,20 @@ Implements:
 - User registration
 - Payment page
 
-
+## Calculate Love
 ![Calculate Love](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/calculateAndSend.gif)
+
+## Results Sent to Email
 ![Email Result](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/result.png)
+
+## Register User
 ![Register User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/register.gif)
+
+## Admin View All
 ![View all User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/viewAll.gif)
+## Admin Delete User
 ![Delete User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/deleteUser.gif)
+
+## Billing
 ![Payment Page](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/payment.gif)
 
