@@ -7,11 +7,10 @@ Implements:
 - Tomcat Server
 - Java
 - Jdbc
-- MySql
-- Jsp
-- Jstl
-- Html
-- Css
+- MySQL
+- JSP
+- HTML
+- CSS
 - Maven
 - Transition from web.xml file to java based configuration
 - Data binding
@@ -38,6 +37,6 @@ Implements:
 ## Admin Delete User
 ![Delete User](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/deleteUser.gif)
 
-## Billing
+## Payment
 ![Payment Page](https://github.com/alexYamaoka/springMVC_love_calculator/blob/master/gifs/payment.gif)
 
