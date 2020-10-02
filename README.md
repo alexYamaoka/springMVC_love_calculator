@@ -11,6 +11,7 @@ Implements:
 - JSP
 - HTML
 - CSS
+-Javascript
 - Maven
 - Transition from web.xml file to java based configuration
 - Data binding
